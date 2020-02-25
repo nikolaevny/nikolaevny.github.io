@@ -1,0 +1,403 @@
+<html>
+
+<head>
+<title>Nikolay Nikolaev</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<STYLE type="text/css" media="screen">
+<!--
+body      { background: white; color: black }
+p         { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: small; }
+A         { text-decoration: none }
+a:active  { font-family: Verdana, Arial, Helvetica, sans-serif; color: mediumblue; }
+a:hover   { font-family: Verdana, Arial, Helvetica, sans-serif; color: maroon; ; text-decoration: underline}
+a:link    { font-family: Verdana, Arial, Helvetica, sans-serif; color: teal; }
+a:visited { font-family: Verdana, Arial, Helvetica, sans-serif; color: navy; }
+h1        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: large; font-weight: bold; font-variant: normal; text-align: center}
+h2        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; font-weight: bold; text-align: center }
+h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-small; font-weight: normal; font-variant: normal; text-transform: none}
+
+-->
+</STYLE>
+</head>
+
+<body bgcolor="#FFFFFF" TEXT="black" LINK="teal" VLINK="navy" ALINK="navy">
+<table border="1" cellpadding="5" width="100%" bordercolor="teal" cellspacing="0">
+  <tr>
+      <td>
+      <CENTER>
+      <p><h3><a href="index.html">Nikolay Nikolaev</a></h3>
+         <p><i>Machine Learning Scientist and Quant Consultant</i></p>
+         <p>nikolaevny-at-yahoo.co.uk</p>
+    </td>
+  </tr>
+</table><br>
+
+<p><h1>Deep Learning and Machine Learning in Computational Finance</h1></p>
+      <CENTER><p><i>Book</i>: Nikolay Nikolaev and Hitoshi Iba (2006). "Adaptive Learning of Polynomial Networks", Springer, New York.</p>
+<br>
+<table width="100%" cellpadding="5" cellspacing="0" border="0">
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Efficient Computation of Sparse Risk-based Portfolios using Machine Learning</i></b>.
+         The risk-based approaches to portfolio construction are modern alternatives to the Markowitz 
+         approach to asset management. These approaches seek portfolio allocations that diversify the risk, 
+         rather than capital allocations. The rationale is that a proper diversification can enhance the 
+         profits as it can be more resistant to market fluctuations. This is achieved by balancing the 
+         exposure to higher-risk assets with lower-risk assets, so that less volatile assets receive 
+         increased weights. Such portfolios are computed with optimization routines using risk diversification 
+         measures. These measures are defined by functions that depend on the asset volatilities, and the 
+         total portfolio volatility but do not depend directly on the returns of the individual assets.</p>
+
+      <p>Our research developed an efficient (reliable and fast) tool for finding sparse risk-based portfolios 
+         using a machine learning algorithm. This is a universal tool which simultaneously perfroms portfolio 
+         selection and diversification while searching for asset allocations. Its distinguishing feature is 
+         a projection algorithm that jointly selects and estimates constrained weights efficiently with explicit 
+         update equations (without running procedures for quadratic programming). The learning algorithm minimizes 
+         iteratively the objective function in one direction at each time step, and also accomodates cardinality 
+         constraints to obtain sparse results. Technically speaking, the algorithm minimizes successively quadratic 
+         loss functions by computing Euclidean projections in a greedy manner. It is different from the primal 
+         projected gradient search algorithm which does not facilitate sparsity. That is why, the tool is especially 
+         suitable for solving high-dimensional risk-based portfolios with capital constraints.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLSPITf.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Learning of Small Portfolios for Index Tracking with Reduced Risk</i></b>.
+         Index tracking is a popular investment strategy for building portfolios 
+         of assets that replicate closely the movement of a benchmark index. The key idea is to find 
+         optimal subsets of assets (partial replication) that regularly outperform the market. This is
+         accomplished by extracting a few representative assets that can be traded with less transaction 
+         costs and reduced risk. The management risk can be reduced using small portfolios which 
+         faithfully represent the hidden structure of the market (that is, the relationships between the 
+         index constituents), and decrease the exposure to unimportant assets.</p>
+      <p>Our research developed an original approach to building small portfolios through deep learning 
+         of sparse autoencoder (SAE) models. The SAE models are trained using specialized topology 
+         reshaping techniques which help to identify less complex models that capture the essential 
+         structure in the data. We elaborate two techniques that enforce reshaping: 1) soft sparsification 
+         with size-adjusting regularization that drives the irrelevant hidden node outputs to zero, and 
+         2) hard sparsification by explicit pruning of redundant hidden nodes without loss of accuracy 
+         (using predefined importance criteria). The desirable sparsity level (percentage of nodes to be
+         truncated) is controlled  with a cardinality parameter which allows to set the desirable size of the
+         investment. The SAE are also made robust to error fluctuations using the heavy-tailed (Student-t)
+         density to handle the output noise. This improves the learning dynamics in addition to using 
+         modern stochastic gradient training algorithms. The practical effect from such robust 
+         treatment of the model is lower variability of the results and risk reduction.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLAEPRT.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Learning Autoencoders for Building Principal Component Portfolios</i></b>.
+         Portfolio arbitrage is a practical economic task that searches for profitable investment allocations in 
+         a selected universe of stocks. The dynamics of multiple financial price series from a portfolio of stocks 
+         may be considered to be driven by a number of common economic factors as well as idiosyncratic terms. This 
+         idea stimulates the research into machine learning methods which investigate hidden factor models of cross-covariances 
+         between asset prices. Two popular methods for finding latent factors are the Principal Component Analysis (PCA) and 
+         the Autoencoders (AE). They help to discover combinations of stocks (market factor) that explain most of the variance 
+         in the selection (systematic risk). Having such factors facilitate the creation of market neutral portfolios by treating 
+         the remaining idiosyncratic risk as a mean-reverting (Ornstein-Uhlenbeck) spread process.</p>
+      <p>Our research develops efficient portfolio trading tools using Autoencoder networks that discover principal components 
+         via Bayesian treatment of the model. Following Variational Bayesian inference we obtain analytical formulae for all model 
+         parameters (including the noise variance and the individual regularizers for each weight). The AE performs weighted 
+         encoding of the inputs into a lower dimensional space, and next weighted decoding of the compressed copy back to an 
+         approximate version in the original space (using a non-Gussian reconstruction error model). The inferred weights, 
+         corresponding to the eigenvectors of the covariance matrix, are taken to calculate the allocations for the stocks in the 
+         eigenportfolio. More precisely, we construct an eigenportfolio as a linear combination of all stocks which are allocated 
+         contributions according to their corresponding coefficients in the first principal component (that is, the combination
+         explains the maximal variance in the data).</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="STARB.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Machine Learning of Heavy-Tailed Dynamic Spread Models for Statistical Arbitrage</i></b>.
+         Statistical arbitrage (statarb) is a trading strategy that analyzes the dynamics of mispricing in combinations of assets 
+         with the aim to exploit deviations from equilibrium levels in the markets, and generate buy/sell trading signals (so as 
+         to make profits before participants eliminate the arbitrage opportunities). The statarb technology identifies systematic 
+         market-dependent components from a slected set of assets, and computes the residual price difference (spread) from the 
+         remaining stocks in the portfolio. One popular idea is that the spread evolution follows a stochastic mean-reverting process.
+         The mean reverting behaviour suggests that price divergencies will return back to their average, and this helps to take
+         short/long positions as well as to build automated trading systems.</p>
+      <p>Our research develops machine learning tools for statistical arbitrage with continuous mixture models. These are continuous
+         mixture models for mean-reverting spreads based on a discrete version of the Ornstein–Uhlenbeck stochastic differential equation. 
+         They are calibrated online with computationally efficient mixture filters to obtain plausible parameter estimates on the 
+         typically non-Gaussian financial data. Our tools have two distinctive advantages: 1) the filters are applied to heavy-tailed models
+         elaborated with dynamic scale-mixtures of normal and gamma densities (that actually approximate Student-t distributions), and 
+         2) they perform robust sequential Bayesian estimation of the parameters. Overall, these are learning machines that carry out 
+         predictive adaptation of the models to the changes in the markets via forecasting of their time-varying parameters.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DCM.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Cleaning of Covariance Matrices for Portfolio Allocation</i></b>.
+         Covariance matrices are important in modern portfolio theory as they provide information about 
+         the collective movement of asset prices and help to achieve efficient portfolio selection. The 
+         covariance matrix shows the interactions between assets, and indicates which combinations can 
+         yield maximum profits with minimum volatility (reduced risk). The particular asset allocations 
+         (portfolio weights) are typically found by optimization using the sample covariance matrix. The 
+         estimation of the sample covariance matrix however is problematic: when there are many stock
+         price series of limited duration their statistical characteristics can not be determined accurately 
+         as their computation accumulates significant errors. Robust portfoilios can be designed after 
+         cleaning the covariance matrix in advance.</p>
+      <p>Our research developed an original technique called Autoencoder Machine (AEM) for deep cleaning 
+         of covariance matrices. The AEM uses a deep neural network that learns parameters corresponding 
+         to the directions of maximum variance of the input data. The training searches for smoother network 
+         mappings and finds denoised versions of the eigenvectors of the covariance matrix which help to 
+         recover its genuine structure. The novel technique achieves such effects due to the following 
+         advantages: 1) it performs predictive cleaning in the sense that it enables to forecast the elements 
+         of the covariance matrix after training with the given past data; 2) it handles the given data with 
+         a heavy-tailed (Student-t) distribution which is well known to be more realistic for treating 
+         returns on prices; and 3) it uses a probabilistic Bayesian procedure for model calibration. </p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="CLSTSOM.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Finding Structure in the Co-movement of Stock Prices via Adaptive Metric Unsupervised Learning</i></b>.
+         Building portfolios involves stock selection by searching for relationships in the stock prices movements. 
+         Having determined the connections between the stocks one can partition them into clusters and apply various
+         techniques for making portfolios. A clustering algorithm places time series into groups of similar elements 
+         with respect to a chosen distance measure. The group centers (centroids) are continuously updated to minimize 
+         the distance-based objective function so as to optimize the allocations. When handling time series of prices 
+         or returns the proximity measure should take into account also for the temporal variability in the 
+         sequentially arriving data.</p>
+      <p>Our research developed an innovative SOM network tool for clustering using a flexible transformation-based 
+         shape measure, which is especially appropriate for finding temporal patterns in real-world financial time series.
+         This metric adapts the pattern from the chosen fair for comparison by linear transformation, which helps to 
+         update more precisely the cluster centroids. Stable performance is achieved using an incremental gradient 
+         descent training of the centroids. The architecture of the the self-organizing network is considered 
+         a two-dimensional rectangular lattice. The center weights are initialized with a random number generator.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="FACV3.JPG" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Analytical Factor Stochastic Volatility Modeling for Portfolio Allocation</i></b>.
+         Factor Stochastic Volatility models exploit the predictability of time-varying returns and 
+         facilitate optimal portfolio allocation. The stochastic volatility models are attractive for 
+         describing changing variances in fiancial data because they allow perturbations by random shocks 
+         in the model, which are independent from past information unlike the well known GARCH models.
+         The problem of evaluating their likelihood and finding exact solutions has been addressed with 
+         various techniques, the most typical from which are Monte Carlo (MCMC) sampling and quasimaximum 
+         likelihood (QML).</p>
+      <p>Our research developed an analytical factor stochastic volatility (AFSV) approach to model estimation
+         with closed-form expressions without using expensive sampling. Adopting the FSV model of Pitt and Shephard 
+         we show that all parameters, including the factor loading matrix, the noises and persistancies of the 
+         factor as well as idiosynchratic series, can be obtained with formulae derived to maximize the complete 
+         likelihood. We implemented a Nonlinear Quadrature Filter and a Smoother (NQFS) which treat the SV directly
+         as a nonlinear model. The NQFS approximates the volatility distributions via recursive numerical convolution 
+         using the Gaussian quadrature scheme. Our NQFS makes Gaussian approximations to the (prior and posterior) 
+         distributions of the volatility, but not in the observations space. This one-step measurement updating 
+         helps to infer distributions with more complex shapes,and this is an improvement over most other numerical          
+         integration filters. After filtering and smoothing, the complete log-likelihood of all data is obtained in  
+         closed-form and the parameters (state noise, observation noise, and persistance) are estimated according 
+         to the Expectation Maximisation (EM) algorithm.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="RPOPCM.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Robust Portfolio Optimization via Connectionist Machine Learning</i></b>.
+         The Mean-Variance Portfolio (MVP) of Markowitz is a popular model for investment diversification and management that helps 
+         to achieve maximized profits with reduced risk. It involves search for the amount of money to invest in each asset given the 
+         sample covariance matrix of asset returns, which is a constrained quadratic programming (QP) problem typically addressed using 
+         standard optimization routines. The QP in context of large scale financial applications is a difficult problem because the sample 
+         covariance matrix of stock returns is very noisy and this misleads the optimization procedures. The practical complication is that 
+         standard optimizers tend to overfit the noise while searching for solutions, and this leads to suboptimal results. One strategy for 
+         dealing with the noise is through statistical cleaning of the covariance matrix in advance.</p>
+      <p>Our research developed a QP optimizer with an embedded Multilayer Perceptron that elaborates on the good features of both: optimizers
+         with stable convergence and neural networks with robust calibration. We implemented an original Connectionist Optimization Machine (COM) 
+         suitable for finding portfolio allocations. Its distinctive features are: 1) it conducts second-order search using the analytical 
+         derivatives of the neural network model,which leads to improved accuracy compared to the use of numerical derivatives (computed by differencing),
+         and 2) it performs input denoising simultaneously with the learning of the model parameters, that is it removes the noise from the sample 
+         covariance matrix during calibration. It should be noted that adopting the framework of classical QP optimizers enables easy accommodation 
+         of various constraints in the training procedures.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DMNN3.JPG" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep-Memory Networks vs. Deep Learning Networks for Stock Market Prediction</i></b>.
+         The Deep Learning Networks (DLN) are popular tools for machine learning. The power of DLNs is in their ability to discover 
+         complex functions of real-world noisy data by composing hierarchically simple representations, technically speaking they learn 
+         to generalize by extracting features. The good results of DLN on data mining tasks motivated researchers to seek improved results 
+         in financial forecasting as well. There have been reported applications to modelling: exchange rates, stock returns, market indices, etc. 
+         The problem is that the application of DLNs to stock market modelling is not straightforward, and their suitability for such tasks has 
+         not been yet fully investigated.</p>
+      <p>Our research invented a novel tool Deep-Memory Neural Networks (DMNN) for machine learning from financial time series and stock
+         market forecasting. The rationale for making deep memory networks for stock market prediction is that financial time series often 
+         feature slowly decaying autocorrelations and this requires long-memory embeddings. The DMNN model takes lagged input vectors of predetermined 
+         depth, and is treated as a dynamical system using sequential Bayesian estimation to accommodate properly the temporal dimension. Thus, 
+         during training the DMNN becomes fitted to its full potential of being a dynamic machine that learns time-dependent functions, and this 
+         is its essential advantage over the other DLNs which are typically trained as static functions. There are implemented various filters that 
+         make the DMNN behave like nonlinear autoregressive models with time-varying parameters.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="PAIRTRD.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Pairs Trading with Markov Regime-Switching Filters</i></b>.
+        Pairs trading is a kind of statistical arbitrage which composes simple low-risk portfolios from two assets whose price movements are found 
+        correlated. Having a pair of assets the idea is to take a short position on the overvalued asset, and a long position on the undervalued 
+        asset. If the the evolution of the price difference (spread) between the assets is captured well one can accumulate profit in the short term. 
+        The differences in prices are taken to trigger trading decisions made with specific strategies, and the portfolio is rebalanced periodically 
+        depending on the reversion rate. The common assumption is that the spread from the cointegrated assets follows a mean-reverting process.</p>
+      <p>Our research developed a computational tool for modeling price differences based on a discrete version of the Ornstein–Uhlenbeck stochastic 
+        differential equation. The adopted mean-reverting spread model is calibrated with a Markov regime-switching filter to obtain plausible parameter
+        estimates on the typically non-Gaussian (heavy-tailed) financial data. Such switching models emit mixtures of Gaussians governed by unobservable 
+        regime variables, thus providing potential to fit flexibly data distributions with non-Gaussian shapes, as well as to describe more accurately 
+        non-stationary financial time series. The spread is represented via regimes of high and low means, and this helps to predict when it reaches 
+        extremal points before returning back to equilibrium. After that, regime dependent arbitrage rules are applied to make profitable risk-neutral 
+        market strategies.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLGARCH.JPG" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Learning of Heteroskedastic Volatility Models for Risk Estimation</i></b>.
+         The volatility (changing variance) in time series of returns on assets impacts the pricing of financial instruments, and it is 
+         a key concept in automated algorithmic trading, option pricing, portfolio management and financial market regulation. The common assumption 
+         is that the return volatility is highly predictable. Popular tools for capturing the variance of the return distribution are the Generalized                           Autoregressive Conditional Heteroscedastic (GARCH) models. These models however are difficult to estimate (typically by maximum likelihood 
+         optimization) and suffer from mistakes, which limits their practical usefulness. </p>
+      <p>Our research developed a deep learning algorithm for dynamic heteroskedastic volatility models (D2GARCH) made as recurrent neural networks.
+         The learning algorithm for D2GARCH creates a deep connectionist structure by unrolling the network in time. The unravelling is a process of
+         transforming the temporal correlations into spatial relationships. The temporally dependent nodes and the recurrent connections are duplicated
+         at each time instant, which leads to a deep topology of unfolded layers with shifted in time inputs trainable with static gradient-based 
+         algorithms. Then, the error is backpropagated through time (BPTT) in the sense that it is passed backward through the unrolled in time network,
+         and the model parameters are adapted gradually to reflect the time ordering in the data sequence. Since the temporal error gradient decays and 
+         may vanish due to the unfolding (so it fails to contribute to the learning process), we apply the Kalman filtering technique [11] to diminish 
+         such effects and to speed up the convergence.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="VaR14.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Value-at-Risk Estimation using Asymmetric Stochastic Volatility Models</i></b>.
+        The Value-at-Risk (VaR) is a risk measure which tells us the maximum loss that may happen with a certain confidence over 
+        a given time period because of the market prices fluctuations. The VaR is associated with the time-varying quantiles
+        of the return distribution, and the VaR can be evaluated by simulating the predictive distribution of returns using bootstrapping.</p>
+      <p>Our research developed a nonlinear filter for asymmetric stochastic volatility models that facilitates accurate empirical 
+        VaR estimation and compensates for the uncertainty in the model parameters. The nonlinear filter evaluates the moments of the prior 
+        and posterior volatility densities via recursive numerical convolution, and thus it obtains more efficiently the likelihood than 
+        the sampling algorithms. Both volatility densities are treated by Gaussian approximations using quadratures. A distinguishing feature
+        of this Nonlinear Quadrature Filter is that it relies on the Gaussian assumption for both prior and posterior volatility densities, 
+        but not for the observations space. This is a key advantage over most other numerical integration filters and allows us to handle 
+        distributions with more complex shapes. In order to deal flexibly with financial series we design a version NQFSt that handles
+        heavy-tailed data using the Student-t distribution.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="ATRRL.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Automated Algorithmic Trading using Recurrent Reinforcement Learning</i></b>.
+         Automated algorithmic trading systems become increasingly popular due to the electronic nature of the transactions executed on many of 
+         the current stock exchanges. Making such quantitative trading systems involves the elaboration of optimal intelligent trading agents that 
+         bid on the market (rather than on discovery of equilibrium prices). The design objective is to construct profitable trading agents, not 
+         only to simulate the market evolution. The trading agents are expected to learn continuously to trade on the market, assuming that it 
+         is populated by other agents with pre-programmed behaviour and also market makers.</p>
+      <p>Our research developed an intelligent trading agent whose behaviour is controlled by a dynamic recurrent neural network using reinforcement
+         learning. This agent is trained using recent market information to improve its bidding strategy and to become more efficient. The network is 
+         given as inputs returns from midprices (in the middle of the bid/ask spread) and predicts the midprice change direction, which helps us to 
+         generate useful trading signals. The agent learns to maximize the Sharpe ratio criterion, instead of learning to predict prices (or returns). 
+         The neural network training algorithm reinforces the agent performance using feedback action signals without forecasting returns and 
+         without explicitly provided targets from an external supervisor. Thus, the learning agent is stimulated to achieve higher profits 
+         with lower risk exposure, that is to take decisions leading to reduced risk performance via rewards with the Sharpe ratio. </p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="SLOC.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Self-Tuning Local Learning Machines for Prediction of Stock Market Returns</i></b>.
+         Current advances in machine learning provide various sophisticated models for predicting financial time series. The selection of a proper
+         learning strategy is extremely important for the success of the time series modelling technology. Processing directly price series (after detrending) 
+         requires global methods of high dimensionality because such series typically feature long distance autocorrelations. For example, 
+         one can develop deep-memory models using internal or external memory. Processing returns on prices requires local models of low dimensionality 
+         as return series typically show low autocorrelations. The nearest neighbour approach to local learning is especially appropriate for describing
+         stock return movements because it is less affected by the changing autocorrelations in price series depending on the volatility. </p>
+      <p>Our research invented a Self-tuning Local Learning Machine (SLLM) that performs nearest neighbour regression especially for predicting 
+         financial time series. It performs self-adaptive translations of the neighbouring vectors during both phases selection and forecasting. The 
+         SLLM is original and involves two elaborated phases: 1) Invariant neighbour selection- it takes a predefined number of nearest patterns using an
+         invariant distance metric to determine the proximity after linear transformations of the vectors, the metric accounts for the changes in the                           magnitude and period for accurate estimation of the nearness; 2) Local movement extrapolation- the prediction is made by averaging over the 
+         future series movements after the neighbours. The predicted next series values accommodate effects from the adjusted shapes formed by the changes
+         in the series amplitude and trend. This is a kind of iterative extrapolation, rather than forecasting with coefficients obtained by fitting.</p><br>
+      </td>
+    </td>
+</tr>
+
+</table>
+
+</body>
+</html>
+
