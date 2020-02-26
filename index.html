@@ -140,7 +140,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          The mean reverting behaviour suggests that price divergencies will return back to their average, and this helps to take
          short/long positions as well as to build automated trading systems.</p>
       <p>Our research develops machine learning tools for statistical arbitrage with continuous mixture models. These are continuous
-         mixture models for mean-reverting spreads based on a discrete version of the Ornstein–Uhlenbeck stochastic differential equation. 
+         mixture models for mean-reverting spreads based on a discrete version of the Ornstein-Uhlenbeck stochastic differential equation. 
          They are calibrated online with computationally efficient mixture filters to obtain plausible parameter estimates on the 
          typically non-Gaussian financial data. Our tools have two distinctive advantages: 1) the filters are applied to heavy-tailed models
          elaborated with dynamic scale-mixtures of normal and gamma densities (that actually approximate Student-t distributions), and 
@@ -206,7 +206,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="FACV3.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="FACV3.JPG" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
       <p><b><i>Analytical Factor Stochastic Volatility Modeling for Portfolio Allocation</i></b>.
@@ -314,7 +314,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <p><b><i>Deep Learning of Heteroskedastic Volatility Models for Risk Estimation</i></b>.
          The volatility (changing variance) in time series of returns on assets impacts the pricing of financial instruments, and it is 
          a key concept in automated algorithmic trading, option pricing, portfolio management and financial market regulation. The common assumption 
-         is that the return volatility is highly predictable. Popular tools for capturing the variance of the return distribution are the Generalized                                    Autoregressive Conditional Heteroscedastic (GARCH) models. These models however are difficult to estimate (typically by maximum likelihood 
+         is that the return volatility is highly predictable. Popular tools for capturing the variance of the return distribution are the Generalized                           Autoregressive Conditional Heteroscedastic (GARCH) models. These models however are difficult to estimate (typically by maximum likelihood 
          optimization) and suffer from mistakes, which limits their practical usefulness. </p>
       <p>Our research developed a deep learning algorithm for dynamic heteroskedastic volatility models (D2GARCH) made as recurrent neural networks.
          The learning algorithm for D2GARCH creates a deep connectionist structure by unrolling the network in time. The unravelling is a process of
@@ -331,15 +331,17 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="VaR14.JPG" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="VaR14.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
       <p><b><i>Value-at-Risk Estimation using Asymmetric Stochastic Volatility Models</i></b>.
         The Value-at-Risk (VaR) is a risk measure which tells us the maximum loss that may happen with a certain confidence over 
         a given time period because of the market prices fluctuations. The VaR is associated with the time-varying quantiles
-        of the return distribution, and the VaR can be evaluated by simulating the predictive distribution of returns using bootstrapping.</p>
-      <p>Our research developed a nonlinear filter for asymmetric stochastic volatility models that facilitates accurate empirical 
-        VaR estimation and compensates for the uncertainty in the model parameters. The nonlinear filter evaluates the moments of the prior 
+        of the return distribution, and the VaR can be evaluated by simulating the predictive distribution of returns using bootstrapping.
+        This technology involves computing one-step-ahead volatility forecasts, and rolling sequentially by one-step foreword over the
+        testing subseries.</p>
+      <p>Our research developed a nonlinear filter for asymmetric stochastic volatility models that facilitates accurate empirical VaR 
+         stimation and compensates for the uncertainty in the model parameters. The nonlinear filter evaluates the moments of the prior 
         and posterior volatility densities via recursive numerical convolution, and thus it obtains more efficiently the likelihood than 
         the sampling algorithms. Both volatility densities are treated by Gaussian approximations using quadratures. A distinguishing feature
         of this Nonlinear Quadrature Filter is that it relies on the Gaussian assumption for both prior and posterior volatility densities, 
@@ -389,9 +391,59 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <p>Our research invented a Self-tuning Local Learning Machine (SLLM) that performs nearest neighbour regression especially for predicting 
          financial time series. It performs self-adaptive translations of the neighbouring vectors during both phases selection and forecasting. The 
          SLLM is original and involves two elaborated phases: 1) Invariant neighbour selection- it takes a predefined number of nearest patterns using an
-         invariant distance metric to determine the proximity after linear transformations of the vectors, the metric accounts for the changes in the                           magnitude and period for accurate estimation of the nearness; 2) Local movement extrapolation- the prediction is made by averaging over the 
+         invariant distance metric to determine the proximity after linear transformations of the vectors, the metric accounts for the changes in the 
+         magnitude and period for accurate estimation of the nearness; 2) Local movement extrapolation- the prediction is made by averaging over the 
          future series movements after the neighbours. The predicted next series values accommodate effects from the adjusted shapes formed by the changes
          in the series amplitude and trend. This is a kind of iterative extrapolation, rather than forecasting with coefficients obtained by fitting.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="NikStrd.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Volatility Forecasting with Bayesian Kernel Models for Trading Straddles</i></b>.
+         Buying and selling straddles (combinations of call and put options with the same starike price and time to maturity) is often performed using
+         volatility trading strategies that do not rely on option price changes. They assume that the straddle prices are sensitive to their 
+         volatility, and suggest to buy (sell) straddles when their predicted volatility increases (decreases). Straddles are typically traded using 
+         direction forecasts of daily (implied) volatility differences in the underlying indexes. This technology involves calibrating volatility models 
+         with pre-computed implied volatilities according to the inverted Black-Scholes formula using historical option prices.</p>
+
+      <p>Our research developed a Bayesian volatility forecasting framework using kernel models for trading straddles. These are probalilistic kernel 
+         machines trained with automatic relevance determination to carry out automatic model selection. The training is accomplished by iterative 
+         maximization of the marginal likelihood of the hyperparameters following the evidence procedure (using a specific noninformative prior over 
+         the weight parameters to obtain more stable hyperparameters). During the learning process some hyperparameters grow thus causing their 
+         corresponding weights to shrink toward zero. Our Kernel Machines showed superior trading performance compared to other popular machine 
+         learning models, like feedforward Neural Networks and Hidden Markov Models, on real-world series of daily closing values of the German stock
+         index DAX together with a series of daily losing prices of call and put options on the DAX with different maturities and exercise prices.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="NikGspf.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Modelling the Stochastic Volatility of Exchange Rates with Monte Carlo Filters</i></b>.
+         Accurate pricing of financial instruments and sucessfull trading can be achieved using estimates of the volatility. 
+         There are various approaches to finding the volatility (considered as an an unobsrved component in financial time series) of price series,
+         like the classical GARCH models and the stochastic volatility (SV) models. The SV models are found empirically more successfull than GARCH 
+         models as they capture better second-order properties of the returns as well as leverage effects. Popular techniques for SV inference are 
+         the particle filters. They use Monte Carlo samples, called particles, whose averaging allows to compute very accurately the characteristics 
+         of the posterior distribution of the unknown parameters. </p>
+
+      <p>Our research developed efficient Gaussian Sum Particle Filters (GSPF) for learning stochastic volatility models from series of returns on prices.
+         These GSPF use Gaussian mixtures to represent all the distributions of interest, including the noise on the latent parameters. Representing 
+         even the noise on the unobserved parameters by a mixture density increases the descriptive potential of the filter, and makes it more flexible 
+         when processing oscillating series. An important advantage of GSPF is that they attain good results with acceptable computational speed, due
+         to the need to maintain a small number of particles than previous filters. The experimental investigations demonstrate that GSPF achieves better 
+         statistical characteristics (smallest deviation from normality, lower autocorrelations, and higher likelihood) than the benchmark GARCH, as well
+         as Particle and Auxiliary Particle filters when applied to infer the volatility of GBP/USD exchange rates series.</p><br>
       </td>
     </td>
 </tr>
