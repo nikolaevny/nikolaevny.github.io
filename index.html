@@ -34,11 +34,46 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 </table><br>
 
 <p></p>
-<p><h1>Machine Learning for Trading Systems and Portfolios</h1></p>
+<p><h1>Machine Learning in Computational Finance</h1></p>
 
-<center>Artificial Intelligence in Computational Finance</center>
+
+<center>Research in Artificial Intelligence for Trading systems and Portfolios</center>
 <br>
 <table width="100%" cellpadding="5" cellspacing="0" border="0">
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DRKOP.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Online Portfolio Trading by Dynamic Reinforcement Learning</i></b>.
+         The computerized trading systems become increasingly popular due to the electronic nature 
+         of the transactions executed on most of the stock markets. Among the various computational 
+         algorithms for financial investing increasingly popular become the machine learning algorithms 
+         for building portfolios of assets. These learning machines offer potential for finding optimal 
+         allocations and suggests efficient rebalancing which helps to maximize profits while minimizing 
+         the risk. They carry out not simply statistical analyis of financial data, but also identify 
+         temporal dependencies that are useful for describing the evolution of sequentially arriving 
+         asset prices. Having such capacity is useful when conducting search for profitable 
+         allocations in a selected universe of stocks.</p>
+
+      <p>Our research developed a Reinforcement Learning machine for Online Portfolio trading (RLOP) 
+         using a recurrent neural network. The network model takes as inputs series of returns from 
+         the assets in the portfolio, and outputs allocations for each asset (the current version 
+         generates long only trading sugnals). The recurrent network is suitable for representing 
+         financial time series as it is especially designed to learn from sequential data via an 
+         internal memory. The memory maintains short-term temporal information which influences 
+         subsequent outputs. This network is a dynamic model that we treat with a proper dynamic 
+         training algorithm, the so called BackPropagation Through time (BPTT). A distinguishing 
+         feature of our machine is that we implement the BPTT with a modern stochastic gradient 
+         descent technique for computing the temporal derivatives (it helps to obtain unbiased 
+         parameter estimates). This technique is further elaborated using momentum and adaptive 
+         learning rate for switching between passive and aggressive updating depending on the 
+         recent profitability.</p><br>
+      </td>
+    </td>
+</tr>
 
   <tr>
     <td align="left" width="2%" valign="top">
@@ -56,7 +91,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          and enhanced performance compared to other strategies like simple index tracking. The Smart Beta 
          is usually implemented with less frequent rebalancing and is often classified as passive investment.</p>
 
-      <p>Our Our research developed a tool for computing low volatility Smart Beta portfolios using 
+      <p>Our research developed a tool for computing low volatility Smart Beta portfolios using 
          large-scale machine learning. The distinguishing contributions of our machine learning framework 
          are: 1) a novel ADMM algorithm for constrained identification of Most Diversified Portfolios (MDP); 
          2) stochastic gradient descent training algorithms with analytical derivatives for quadratic 
@@ -98,7 +133,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          from the previous weights, and the distance from the mean reversion threshold. The motivation is to 
          keep the portfolio close to the previous one, and to rebalance it when the return increases above 
          the threshold. The threshold parameter is estimated at every time step using a discrete version of 
-         the Ornstein-Uhlenbeck stochastic differential equation.</p><br>
+         the Ornstein–Uhlenbeck stochastic differential equation.</p><br>
       </td>
     </td>
 </tr>
@@ -397,7 +432,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="VaR14.JPG" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="VaR14.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
       <p><b><i>Value-at-Risk Estimation using Asymmetric Stochastic Volatility Models</i></b>.
