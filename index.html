@@ -75,34 +75,126 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Dlfmapp.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Learning of Dynamic Factor Models for Asset Pricing</i></b>.
+         The large amount of transactions on the electronic exchanges today stimulates the 
+         development of computational algorithms for automated portfolio trading. These algorithms
+         continuously optimize the portfolio with the arrival of new information on the market. 
+         The optimization strategy typically includes asset pricing, asset selection and rebalancing.
+         A popular formalism for asset pricing are the factor models. A factor model describes the
+         relationships between assets by regressing their returns on unobservable latent variables
+         Such a model captures the dependencies between multiple return series into a small number
+         of correlations. The difficulty is to choose only a subset of factors which taken together
+         are profitable to trade, that is to select a parsimonious factor model.</p>
+
+      <p>Our research developed an original nonlinear dynamic factor model for asset pricing using 
+         a deep learning technology. We designed a dynamic factor model represented by a recurrent 
+         neural network with local memory that carries temporal information. The network is trained 
+         with a dynamic learning algorithm the BPTT (Backpropagation Through Time) which unfolds 
+         the model back in time to capture temporal dependencies. This is a deep learning mechanism 
+         because the unrolling creates a deep network structure. The BPTT is used to update the 
+         parameters of the hidden layer which produces the latent factors. The output layer computes 
+         the beta loadings. The strength of our model is that it predicts asset returns from inferred 
+         factor realizations, more precisely, the factors are forecasted arrangements of individual
+         asset contributions to the overall portfolio. The overall model is a time-dependent function
+         whose forecasts are less sensitive to noise and nonstationarities in the time series.</p><br>
+      </td>
+    </td>
+</tr>
+
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Svmprtf.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Support Vector Machine Learning of Sparse Portfolios</i></b>.
-         The portfolio construction task involves finding an optimal subset of assets for 
-         investment and estimating their allocations. An efficient method for solving both tasks 
-         simultaneously is to use high-dimensional regression models (where asset prices/returns 
-         are used as regressors and allocations as weights) with cardinality constraints. This 
-         is a numerically difficult problem because learning high-dimensional models from noisy,
-         real-world financial data leads to weights that are not very precise. Overcoming such 
-         computational difficulties is important for the practical applicability of such models. 
-         The common strategy to mitigate these difficulties is to develop stable procedures that 
-         seek sparse models by shrinking the weights using regularization techniques.</p>
+      <p><b><i>Efficient Computation of Sparse Risk-based Portfolios using Machine Learning</i></b>.
+         The risk-based approaches to portfolio construction are modern alternatives to the Markowitz 
+         approach to asset management. These approaches seek portfolio allocations that diversify the risk, 
+         rather than capital allocations. The rationale is that a proper diversification can enhance the 
+         profits as it can be more resistant to market fluctuations. This is achieved by balancing the 
+         exposure to higher-risk assets with lower-risk assets, so that less volatile assets receive 
+         increased weights. Such portfolios are computed with optimization routines using risk diversification 
+         measures. These measures are defined by functions that depend on the asset volatilities, and the 
+         total portfolio volatility but do not depend directly on the returns of the individual assets.</p>
 
-      <p>Our research implemented a reformulated epsilon Support Vector Regression (e-SVR) 
-         machine for efficient and robust learning of portfolios (including the number of 
-         assets/cardinality and the weights/allocations). This reformulation enables fast and 
-         reliable convergence to unique globally minimal solutions (without using slow 
-         optimization procedures). The e-SVR minimizes the structural risk (which is a kind 
-         of generalization error consisting of fitting error plus regularization) and, that 
-         is why, it learns parsimonious models. The plausible values of the hyperparameters 
-         that govern the model complexity are found with a cross-validation technique using 
-         the available historical data. Actually there are two hyperparameters: the first 
-         determines the size of the sensitivity, and the second determines its 
-         influence on the magnitude of the fitting error.</p><br>
+      <p>Our research developed an efficient (reliable and fast) tool for finding sparse risk-based portfolios 
+         using a machine learning algorithm. This is a universal tool which simultaneously perfroms portfolio 
+         selection and diversification while searching for asset allocations. Its distinguishing feature is 
+         a projection algorithm that jointly selects and estimates constrained weights efficiently with explicit 
+         update equations (without running procedures for quadratic programming). The learning algorithm minimizes 
+         iteratively the objective function in one direction at each time step, and also accomodates cardinality 
+         constraints to obtain sparse results. Technically speaking, the algorithm minimizes successively quadratic 
+         loss functions by computing Euclidean projections in a greedy manner. It is different from the primal 
+         projected gradient search algorithm which does not facilitate sparsity. That is why, the tool is especially 
+         suitable for solving high-dimensional risk-based portfolios with capital constraints.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="RBMRr1.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Bayesian Machine Learning for Robust On-line Portfolio Selection</i></b>.
+         The predominant amount of trades on the biggest stock markets in the world are currently done 
+         automatically. Electronic trading is conducted using various kinds of algorithms, like for example 
+         portfolio robo-advisors. Such on-line portfolio selection algorithms calculate asset allocations 
+         sequentially with the arrival of stock price data. At every time instant when stock prices arrive 
+         the allocations are re-estimated to take into account the new information from the market. The 
+         objective of on-line portfolio investing is maximization of the cumulative wealth with minimum risk. 
+         The allocations (weights) indicate the portions of wealth to be transferred between the assets. The 
+         activity of buying and selling corresponding fractions of assets is called rebalancing.</p>
+
+      <p>Our research developed a robust on-line portfolio construction tool using Bayesian machine 
+         learning. We apply variational Bayesian inference to derive a learning algorithm for robust
+         regression, which is especially suitable for processing financial time series typically contaminated 
+         by large amounts of noise. The original feature of our tool is a Bayesian learning algorithm for
+         calibrating heavy-tailed models of returns on prices (based on an approximation of the Student-t 
+         density by an infinite mixture of Gaussians). After pre-processing the price series with this algorithm, 
+         sequential estimation of the weights is accomplished with stochastic gradient descent search for 
+         solving the portfolio optimization problem. The optimization problem involves minimizing the deviation
+         from the previous weights, and the distance from the mean reversion threshold. The motivation is to 
+         keep the portfolio close to the previous one, and to rebalance it when the return increases above 
+         the threshold. The threshold parameter is estimated at every time step using a discrete version of 
+         the Ornstein-Uhlenbeck stochastic differential equation.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLSPITf.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Learning of Small Portfolios for Index Tracking with Reduced Risk</i></b>.
+         Index tracking is a popular investment strategy for building portfolios 
+         of assets that replicate closely the movement of a benchmark index. The key idea is to find 
+         optimal subsets of assets (partial replication) that regularly outperform the market. This is
+         accomplished by extracting a few representative assets that can be traded with less transaction 
+         costs and reduced risk. The management risk can be reduced using small portfolios which 
+         faithfully represent the hidden structure of the market (that is, the relationships between the 
+         index constituents), and decrease the exposure to unimportant assets.</p>
+      <p>Our research developed an original approach to building small portfolios through deep learning 
+         of sparse autoencoder (SAE) models. The SAE models are trained using specialized topology 
+         reshaping techniques which help to identify less complex models that capture the essential 
+         structure in the data. We elaborate two techniques that enforce reshaping: 1) soft sparsification 
+         with size-adjusting regularization that drives the irrelevant hidden node outputs to zero, and 
+         2) hard sparsification by explicit pruning of redundant hidden nodes without loss of accuracy 
+         (using predefined importance criteria). The desirable sparsity level (percentage of nodes to be
+         truncated) is controlled  with a cardinality parameter which allows to set the desirable size of the
+         investment. The SAE are also made robust to error fluctuations using the heavy-tailed (Student-t)
+         density to handle the output noise. This improves the learning dynamics in addition to using 
+         modern stochastic gradient training algorithms. The practical effect from such robust 
+         treatment of the model is lower variability of the results and risk reduction.</p><br>
       </td>
     </td>
 </tr>
@@ -141,94 +233,35 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="RBMRr1.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Svmprtf.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Bayesian Machine Learning for Robust On-line Portfolio Selection</i></b>.
-         The predominant amount of trades on the biggest stock markets in the world are currently done 
-         automatically. Electronic trading is conducted using various kinds of algorithms, like for example 
-         portfolio robo-advisors. Such on-line portfolio selection algorithms calculate asset allocations 
-         sequentially with the arrival of stock price data. At every time instant when stock prices arrive 
-         the allocations are re-estimated to take into account the new information from the market. The 
-         objective of on-line portfolio investing is maximization of the cumulative wealth with minimum risk. 
-         The allocations (weights) indicate the portions of wealth to be transferred between the assets. The 
-         activity of buying and selling corresponding fractions of assets is called rebalancing.</p>
+      <p><b><i>Support Vector Machine Learning of Sparse Portfolios</i></b>.
+         The portfolio construction task involves finding an optimal subset of assets for 
+         investment and estimating their allocations. An efficient method for solving both tasks 
+         simultaneously is to use high-dimensional regression models (where asset prices/returns 
+         are used as regressors and allocations as weights) with cardinality constraints. This 
+         is a numerically difficult problem because learning high-dimensional models from noisy,
+         real-world financial data leads to weights that are not very precise. Overcoming such 
+         computational difficulties is important for the practical applicability of such models. 
+         The common strategy to mitigate these difficulties is to develop stable procedures that 
+         seek sparse models by shrinking the weights using regularization techniques.</p>
 
-      <p>Our research developed a robust on-line portfolio construction tool using Bayesian machine 
-         learning. We apply variational Bayesian inference to derive a learning algorithm for robust
-         regression, which is especially suitable for processing financial time series typically contaminated 
-         by large amounts of noise. The original feature of our tool is a Bayesian learning algorithm for
-         calibrating heavy-tailed models of returns on prices (based on an approximation of the Student-t 
-         density by an infinite mixture of Gaussians). After pre-processing the price series with this algorithm, 
-         sequential estimation of the weights is accomplished with stochastic gradient descent search for 
-         solving the portfolio optimization problem. The optimization problem involves minimizing the deviation
-         from the previous weights, and the distance from the mean reversion threshold. The motivation is to 
-         keep the portfolio close to the previous one, and to rebalance it when the return increases above 
-         the threshold. The threshold parameter is estimated at every time step using a discrete version of 
-         the Ornstein-Uhlenbeck stochastic differential equation.</p><br>
+      <p>Our research implemented a reformulated epsilon Support Vector Regression (e-SVR) 
+         machine for efficient and robust learning of portfolios (including the number of 
+         assets/cardinality and the weights/allocations). This reformulation enables fast and 
+         reliable convergence to unique globally minimal solutions (without using slow 
+         optimization procedures). The e-SVR minimizes the structural risk (which is a kind 
+         of generalization error consisting of fitting error plus regularization) and, that 
+         is why, it learns parsimonious models. The plausible values of the hyperparameters 
+         that govern the model complexity are found with a cross-validation technique using 
+         the available historical data. Actually there are two hyperparameters: the first 
+         determines the size of the sensitivity, and the second determines its 
+         influence on the magnitude of the fitting error.</p><br>
       </td>
     </td>
 </tr>
 
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Efficient Computation of Sparse Risk-based Portfolios using Machine Learning</i></b>.
-         The risk-based approaches to portfolio construction are modern alternatives to the Markowitz 
-         approach to asset management. These approaches seek portfolio allocations that diversify the risk, 
-         rather than capital allocations. The rationale is that a proper diversification can enhance the 
-         profits as it can be more resistant to market fluctuations. This is achieved by balancing the 
-         exposure to higher-risk assets with lower-risk assets, so that less volatile assets receive 
-         increased weights. Such portfolios are computed with optimization routines using risk diversification 
-         measures. These measures are defined by functions that depend on the asset volatilities, and the 
-         total portfolio volatility but do not depend directly on the returns of the individual assets.</p>
-
-      <p>Our research developed an efficient (reliable and fast) tool for finding sparse risk-based portfolios 
-         using a machine learning algorithm. This is a universal tool which simultaneously perfroms portfolio 
-         selection and diversification while searching for asset allocations. Its distinguishing feature is 
-         a projection algorithm that jointly selects and estimates constrained weights efficiently with explicit 
-         update equations (without running procedures for quadratic programming). The learning algorithm minimizes 
-         iteratively the objective function in one direction at each time step, and also accomodates cardinality 
-         constraints to obtain sparse results. Technically speaking, the algorithm minimizes successively quadratic 
-         loss functions by computing Euclidean projections in a greedy manner. It is different from the primal 
-         projected gradient search algorithm which does not facilitate sparsity. That is why, the tool is especially 
-         suitable for solving high-dimensional risk-based portfolios with capital constraints.</p><br>
-      </td>
-    </td>
-</tr>
-
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLSPITf.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Learning of Small Portfolios for Index Tracking with Reduced Risk</i></b>.
-         Index tracking is a popular investment strategy for building portfolios 
-         of assets that replicate closely the movement of a benchmark index. The key idea is to find 
-         optimal subsets of assets (partial replication) that regularly outperform the market. This is
-         accomplished by extracting a few representative assets that can be traded with less transaction 
-         costs and reduced risk. The management risk can be reduced using small portfolios which 
-         faithfully represent the hidden structure of the market (that is, the relationships between the 
-         index constituents), and decrease the exposure to unimportant assets.</p>
-      <p>Our research developed an original approach to building small portfolios through deep learning 
-         of sparse autoencoder (SAE) models. The SAE models are trained using specialized topology 
-         reshaping techniques which help to identify less complex models that capture the essential 
-         structure in the data. We elaborate two techniques that enforce reshaping: 1) soft sparsification 
-         with size-adjusting regularization that drives the irrelevant hidden node outputs to zero, and 
-         2) hard sparsification by explicit pruning of redundant hidden nodes without loss of accuracy 
-         (using predefined importance criteria). The desirable sparsity level (percentage of nodes to be
-         truncated) is controlled  with a cardinality parameter which allows to set the desirable size of the
-         investment. The SAE are also made robust to error fluctuations using the heavy-tailed (Student-t)
-         density to handle the output noise. This improves the learning dynamics in addition to using 
-         modern stochastic gradient training algorithms. The practical effect from such robust 
-         treatment of the model is lower variability of the results and risk reduction.</p><br>
-      </td>
-    </td>
-</tr>
 
 <tr>
     <td align="left" width="2%" valign="top">
