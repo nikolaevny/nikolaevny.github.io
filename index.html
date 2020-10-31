@@ -44,33 +44,35 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DRKOP.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="CRLplot2.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Online Portfolio Trading by Dynamic Reinforcement Learning</i></b>.
-         The computerized trading systems become increasingly popular due to the electronic nature 
-         of the transactions executed on most of the stock markets. Among the various computational 
-         algorithms for financial investing increasingly popular become the machine learning algorithms 
-         for building portfolios of assets. These learning machines offer potential for finding optimal 
-         allocations and suggest efficient rebalancing which helps to maximize profits while minimizing 
-         the risk. They carry out not simply statistical analyis of data, but also identify temporal 
-         dependencies that are useful for describing the evolution of sequentially arriving 
-         asset prices. Having such capacity is useful when searching for profitable 
-         allocations in a selected universe of stocks.</p>
+      <p><b><i>Efficient Direct Reinforcement Learning of Low-risk Portfolios</i></b>.
+         Reinforcement Learning (RL) shows encouraging results for computing automated investment 
+         strategies. The RL paradigm offers procedures that easily accomodate risk-adjusted performance 
+         functions and facilitate portfolio optimization without forecasting models. The RL algorithms 
+         continuosly maximize the objective function by taking actions without explicitly provided 
+         targets, that is using only inputs and feedbacks on their performance. This algorithmic 
+         capacity to take behavioural decisions makes them especially convenient for the design of 
+         reliable portfolio trading systems. The two main RL methods currently studied as alternatives 
+         for financial portfolio construction and trading are: 1) value-based (Q-learning), 
+         and 2) policy-based (Direct Reinforcement) learning. ). The theoretical and empirical studies 
+         recommend the Direct Reinforcement (DR) learning as a potentially better mechanism for 
+         finding profitable portfolios.</p>
 
-      <p>Our research developed a Reinforcement Learning machine for Online Portfolio trading (RLOP) 
-         using a recurrent neural network. The network model takes as inputs series of returns from 
-         the assets in the portfolio, and outputs allocations for each asset (the current version 
-         generates long only trading sugnals). The recurrent network is suitable for representing 
-         financial series as it is especially designed to learn from sequential data via an 
-         internal memory. The memory maintains short-term temporal information which influences 
-         subsequent outputs. This network is a dynamic model that we treat with a proper dynamic 
-         training algorithm, the so called BackPropagation Through time (BPTT). A distinguishing 
-         feature of our machine is that we implement the BPTT with a modern stochastic gradient 
-         descent technique for computing the temporal derivatives (it helps to obtain unbiased 
-         parameter estimates). This technique is further elaborated using adaptive learning rate 
-         for switching between passive and aggressive updating depending on the 
-         recent profitability.</p><br>
+      <p>Our research developed a Connectionist Reinforcement Learning machine for efficient computation 
+         of Online Portfolios (CRLOP). This is a multi-output feedforward neural network where each 
+         network output generates allocation for a particular asset in the portfolio and the inputs pass 
+         lagged returns from the corresponding asset prices. The network is trained with an original
+         hybrid risk-return optimization function, which includes the Sharpe ratio and an additional 
+         term that accounts for the risk asymmetrically (this term discounts the effects from the loosing 
+         trades). This is necessary to overcome the equal treatment of high profits and heavy losses in 
+         the symmetric standard deviation formula. During training the network adapts the weights to 
+         achieve higher portfolio profits with low-risk by sensing the returns and using them to reinforce 
+         its performance without fitting the data, this uses the goodness of the recent updating action 
+         on the current state of the algorithm. The allocations are obtained incrementally in forward 
+         manner by passing the data through the network and modifying the weights (with immediate rewards 
+         from the previous results) using a modern stochastic training technique.</p><br>
       </td>
     </td>
 </tr>
@@ -107,35 +109,60 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-  <tr>
+<tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="STARB.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Efficient Computation of Sparse Risk-based Portfolios using Machine Learning</i></b>.
-         The risk-based approaches to portfolio construction are modern alternatives to the Markowitz 
-         approach to asset management. These approaches seek portfolio allocations that diversify the risk, 
-         rather than capital allocations. The rationale is that a proper diversification can enhance the 
-         profits as it can be more resistant to market fluctuations. This is achieved by balancing the 
-         exposure to higher-risk assets with lower-risk assets, so that less volatile assets receive 
-         increased weights. Such portfolios are computed with optimization routines using risk diversification 
-         measures. These measures are defined by functions that depend on the asset volatilities, and the 
-         total portfolio volatility but do not depend directly on the returns of the individual assets.</p>
-
-      <p>Our research developed an efficient (reliable and fast) tool for finding sparse risk-based portfolios 
-         using a machine learning algorithm. This is a universal tool which simultaneously perfroms portfolio 
-         selection and diversification while searching for asset allocations. Its distinguishing feature is 
-         a projection algorithm that jointly selects and estimates constrained weights efficiently with explicit 
-         update equations (without running procedures for quadratic programming). The learning algorithm minimizes 
-         iteratively the objective function in one direction at each time step, and also accomodates cardinality 
-         constraints to obtain sparse results. Technically speaking, the algorithm minimizes successively quadratic 
-         loss functions by computing Euclidean projections in a greedy manner. It is different from the primal 
-         projected gradient search algorithm which does not facilitate sparsity. That is why, the tool is especially 
-         suitable for solving high-dimensional risk-based portfolios with capital constraints.</p><br>
+      <p><b><i>Machine Learning of Heavy-Tailed Dynamic Spread Models for Statistical Arbitrage</i></b>.
+         Statistical arbitrage (statarb) is a trading strategy that analyzes the dynamics of mispricing in combinations of assets 
+         with the aim to exploit deviations from equilibrium levels in the markets, and generate buy/sell trading signals (so as 
+         to make profits before participants eliminate the arbitrage opportunities). The statarb technology identifies systematic 
+         market-dependent components from a slected set of assets, and computes the residual price difference (spread) from the 
+         remaining stocks in the portfolio. One popular idea is that the spread evolution follows a stochastic mean-reverting process.
+         The mean reverting behaviour suggests that price divergencies will return back to their average, and this helps to take
+         short/long positions as well as to build automated trading systems.</p>
+      <p>Our research develops machine learning tools for statistical arbitrage with continuous mixture models. These are continuous
+         mixture models for mean-reverting spreads based on a discrete version of the Ornstein-Uhlenbeck stochastic differential equation. 
+         They are calibrated online with computationally efficient mixture filters to obtain plausible parameter estimates on the 
+         typically non-Gaussian financial data. Our tools have two distinctive advantages: 1) the filters are applied to heavy-tailed models
+         elaborated with dynamic scale-mixtures of normal and gamma densities (that actually approximate Student-t distributions), and 
+         2) they perform robust sequential Bayesian estimation of the parameters. Overall, these are learning machines that carry out 
+         predictive adaptation of the models to the changes in the markets via forecasting of their time-varying parameters.</p><br>
       </td>
     </td>
 </tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DCM.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Cleaning of Covariance Matrices for Portfolio Allocation</i></b>.
+         Covariance matrices are important in modern portfolio theory as they provide information about 
+         the collective movement of asset prices and help to achieve efficient portfolio selection. The 
+         covariance matrix shows the interactions between assets, and indicates which combinations can 
+         yield maximum profits with minimum volatility (reduced risk). The particular asset allocations 
+         (portfolio weights) are typically found by optimization using the sample covariance matrix. The 
+         estimation of the sample covariance matrix however is problematic: when there are many stock
+         price series of limited duration their statistical characteristics can not be determined accurately 
+         as their computation accumulates significant errors. Robust portfoilios can be designed after 
+         cleaning the covariance matrix in advance.</p>
+      <p>Our research developed an original technique called Autoencoder Machine (AEM) for deep cleaning 
+         of covariance matrices. The AEM uses a deep neural network that learns parameters corresponding 
+         to the directions of maximum variance of the input data. The training searches for smoother network 
+         mappings and finds denoised versions of the eigenvectors of the covariance matrix which help to 
+         recover its genuine structure. The novel technique achieves such effects due to the following 
+         advantages: 1) it performs predictive cleaning in the sense that it enables to forecast the elements 
+         of the covariance matrix after training with the given past data; 2) it handles the given data with 
+         a heavy-tailed (Student-t) distribution which is well known to be more realistic for treating 
+         returns on prices; and 3) it uses a probabilistic Bayesian procedure for model calibration. </p><br>
+      </td>
+    </td>
+</tr>
+
 
 <tr>
     <td align="left" width="2%" valign="top">
@@ -291,56 +318,32 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-<tr>
+  <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="STARB.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Machine Learning of Heavy-Tailed Dynamic Spread Models for Statistical Arbitrage</i></b>.
-         Statistical arbitrage (statarb) is a trading strategy that analyzes the dynamics of mispricing in combinations of assets 
-         with the aim to exploit deviations from equilibrium levels in the markets, and generate buy/sell trading signals (so as 
-         to make profits before participants eliminate the arbitrage opportunities). The statarb technology identifies systematic 
-         market-dependent components from a slected set of assets, and computes the residual price difference (spread) from the 
-         remaining stocks in the portfolio. One popular idea is that the spread evolution follows a stochastic mean-reverting process.
-         The mean reverting behaviour suggests that price divergencies will return back to their average, and this helps to take
-         short/long positions as well as to build automated trading systems.</p>
-      <p>Our research develops machine learning tools for statistical arbitrage with continuous mixture models. These are continuous
-         mixture models for mean-reverting spreads based on a discrete version of the Ornstein-Uhlenbeck stochastic differential equation. 
-         They are calibrated online with computationally efficient mixture filters to obtain plausible parameter estimates on the 
-         typically non-Gaussian financial data. Our tools have two distinctive advantages: 1) the filters are applied to heavy-tailed models
-         elaborated with dynamic scale-mixtures of normal and gamma densities (that actually approximate Student-t distributions), and 
-         2) they perform robust sequential Bayesian estimation of the parameters. Overall, these are learning machines that carry out 
-         predictive adaptation of the models to the changes in the markets via forecasting of their time-varying parameters.</p><br>
-      </td>
-    </td>
-</tr>
+      <p><b><i>Efficient Computation of Sparse Risk-based Portfolios using Machine Learning</i></b>.
+         The risk-based approaches to portfolio construction are modern alternatives to the Markowitz 
+         approach to asset management. These approaches seek portfolio allocations that diversify the risk, 
+         rather than capital allocations. The rationale is that a proper diversification can enhance the 
+         profits as it can be more resistant to market fluctuations. This is achieved by balancing the 
+         exposure to higher-risk assets with lower-risk assets, so that less volatile assets receive 
+         increased weights. Such portfolios are computed with optimization routines using risk diversification 
+         measures. These measures are defined by functions that depend on the asset volatilities, and the 
+         total portfolio volatility but do not depend directly on the returns of the individual assets.</p>
 
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DCM.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Cleaning of Covariance Matrices for Portfolio Allocation</i></b>.
-         Covariance matrices are important in modern portfolio theory as they provide information about 
-         the collective movement of asset prices and help to achieve efficient portfolio selection. The 
-         covariance matrix shows the interactions between assets, and indicates which combinations can 
-         yield maximum profits with minimum volatility (reduced risk). The particular asset allocations 
-         (portfolio weights) are typically found by optimization using the sample covariance matrix. The 
-         estimation of the sample covariance matrix however is problematic: when there are many stock
-         price series of limited duration their statistical characteristics can not be determined accurately 
-         as their computation accumulates significant errors. Robust portfoilios can be designed after 
-         cleaning the covariance matrix in advance.</p>
-      <p>Our research developed an original technique called Autoencoder Machine (AEM) for deep cleaning 
-         of covariance matrices. The AEM uses a deep neural network that learns parameters corresponding 
-         to the directions of maximum variance of the input data. The training searches for smoother network 
-         mappings and finds denoised versions of the eigenvectors of the covariance matrix which help to 
-         recover its genuine structure. The novel technique achieves such effects due to the following 
-         advantages: 1) it performs predictive cleaning in the sense that it enables to forecast the elements 
-         of the covariance matrix after training with the given past data; 2) it handles the given data with 
-         a heavy-tailed (Student-t) distribution which is well known to be more realistic for treating 
-         returns on prices; and 3) it uses a probabilistic Bayesian procedure for model calibration. </p><br>
+      <p>Our research developed an efficient (reliable and fast) tool for finding sparse risk-based portfolios 
+         using a machine learning algorithm. This is a universal tool which simultaneously perfroms portfolio 
+         selection and diversification while searching for asset allocations. Its distinguishing feature is 
+         a projection algorithm that jointly selects and estimates constrained weights efficiently with explicit 
+         update equations (without running procedures for quadratic programming). The learning algorithm minimizes 
+         iteratively the objective function in one direction at each time step, and also accomodates cardinality 
+         constraints to obtain sparse results. Technically speaking, the algorithm minimizes successively quadratic 
+         loss functions by computing Euclidean projections in a greedy manner. It is different from the primal 
+         projected gradient search algorithm which does not facilitate sparsity. That is why, the tool is especially 
+         suitable for solving high-dimensional risk-based portfolios with capital constraints.</p><br>
       </td>
     </td>
 </tr>
@@ -585,6 +588,40 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          corresponding weights to shrink toward zero. Our Kernel Machines showed superior trading performance compared to other popular machine 
          learning models, like feedforward Neural Networks and Hidden Markov Models, on real-world series of daily closing values of the German stock
          index DAX together with a series of daily losing prices of call and put options on the DAX with different maturities and exercise prices.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DRKOP.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Online Portfolio Trading by Dynamic Reinforcement Learning</i></b>.
+         The computerized trading systems become increasingly popular due to the electronic nature 
+         of the transactions executed on most of the stock markets. Among the various computational 
+         algorithms for financial investing increasingly popular become the machine learning algorithms 
+         for building portfolios of assets. These learning machines offer potential for finding optimal 
+         allocations and suggest efficient rebalancing which helps to maximize profits while minimizing 
+         the risk. They carry out not simply statistical analyis of data, but also identify temporal 
+         dependencies that are useful for describing the evolution of sequentially arriving 
+         asset prices. Having such capacity is useful when searching for profitable 
+         allocations in a selected universe of stocks.</p>
+
+      <p>Our research developed a Reinforcement Learning machine for Online Portfolio trading (RLOP) 
+         using a recurrent neural network. The network model takes as inputs series of returns from 
+         the assets in the portfolio, and outputs allocations for each asset (the current version 
+         generates long only trading sugnals). The recurrent network is suitable for representing 
+         financial series as it is especially designed to learn from sequential data via an 
+         internal memory. The memory maintains short-term temporal information which influences 
+         subsequent outputs. This network is a dynamic model that we treat with a proper dynamic 
+         training algorithm, the so called BackPropagation Through time (BPTT). A distinguishing 
+         feature of our machine is that we implement the BPTT with a modern stochastic gradient 
+         descent technique for computing the temporal derivatives (it helps to obtain unbiased 
+         parameter estimates). This technique is further elaborated using adaptive learning rate 
+         for switching between passive and aggressive updating depending on the 
+         recent profitability.</p><br>
       </td>
     </td>
 </tr>
