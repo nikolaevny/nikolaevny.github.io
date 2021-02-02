@@ -60,11 +60,15 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          while being controlled by different parameters. The generator learns to produce samples from the 
          distribution of the data. The discriminator evaluates the feasibility of the drawn samples and decides 
          whether they are realistic or fake. We designed the generator using a Deep Neural Network (DNN) 
-         to represent a synthetic distribution of portfolio weights (stock allocations), aiming at recovery of
-         good allocations (without forecasting returns on prices as in some previous works). A uniform 
+         for representing synthetic distributions of portfolio weights (stock allocations). A uniform 
          random prior is passed as input, propagated forward through the network, and the network output 
-         returns a weights vector sample. The discriminator applies analytical formulae to compute 
-         optimal weights which suggest a reference mean-variance portfolio for comparisons.</p><br>
+         returns a weights vector sample (without forecasting returns on prices as in some previous works). 
+         The discriminator applies analytical formulae to compute optimal weights which suggest a reference
+         mean-variance portfolio for comparisons. During the optimization process the discrepancy between 
+         the assumed optimal weights and the sampled weights decreases, and the generator converges to 
+         a better estimator of the weights distribution leading to portfolios with improved performance. 
+         The advantage of this approach is that it has capacity to learn fast the weights distribution 
+         in nonparametric fashion.</p><br>
       </td>
     </td>
 </tr>
@@ -76,7 +80,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <br>
       <td align="left" width="90%" valign="top">
       <p><b><i>Machine Learning of Heavy-Tailed Dynamic Spread Models for Statistical Arbitrage</i></b>.
-         Statistical arbitrage (statarb) is a trading strategy that analyzes the dynamics of mispricing in combinations of assets 
+         Statistical arbitrage is a trading strategy that analyzes the dynamics of mispricing in combinations of assets 
          with the aim to exploit deviations from equilibrium levels in the markets, and generate buy/sell trading signals (so as 
          to make profits before participants eliminate the arbitrage opportunities). The statarb technology identifies systematic 
          market-dependent components from a slected set of assets, and computes the residual price difference (spread) from the 
@@ -135,13 +139,12 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          Connectionist learning offers powerful modern technologies for quantitative modelling that can 
          be used to reduce investment risk. It provides highly nonlinear models which are convenient 
          for describing multivariate time series of returns on prices. Such connectionist machines that
-         become increasingly popular in financial engineering are the Deep Neural Networks (DNN). They 
-         find complex functions by composing simple representations, and extracting essential features 
-         from data. The DNN have already been applied to predict stock returns for building portfolios. 
-         The most popular deep networks for such tasks include the recurrent Long-Short Term Memory (LSTM) 
-         neural networks, the Deep Multilayer Perceptrons (DMLP), and the Convolutional Neural Networks (CNN).
-         The attractive fundamental concept underlying all these deep networks is nonlinearity. The 
-         nonlinearity is especially important when searching for models that generalise well, that is 
+         become increasingly popular in financial engineering are the Deep Neural Networks (DNN). The DNN 
+         have already been applied to predict stock returns for building portfolios. The most popular 
+         deep networks for such tasks include the recurrent Long-Short Term Memory (LSTM) neural networks, 
+         the Deep Multilayer Perceptrons (DMLP), and the Convolutional Neural Networks (CNN). The attractive
+         fundamental concept underlying all these deep networks is nonlinearity. The nonlinearity is 
+         especially important when searching for models that generalise well, that is 
          perform well on unseen future data.</p>
 
       <p>Our research developed an original Robust DNN (RDNN) model with rectified and sigmoidal 
@@ -151,7 +154,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          disturbances from outliers using the heavy-tailed (Student-t) noise distribution. Adopting the 
          Student-t distribution for the noise is important for handling practical financial time series 
          because the estimates can be affected severely by atypical observations. Moreover, the departure 
-         from Gaussianity affects the model selection and may lead to choosing a network model with wrong 
+         from Gaussianity affects the model selection and may lead to choosing a model with wrong 
          complexity. We obtained robust derivatives are plugged them into a contemporary stochastic 
          gradient descent training algorithm. The RDNN attains good generalization as it avoids overfitting 
          using two techniques: structural sparsity (attained with the rectified units which induce sparsity) 
@@ -188,8 +191,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          trades). This is necessary to overcome the equal treatment of high profits and heavy losses in 
          the symmetric standard deviation formula. During training the network adapts the weights to 
          achieve higher portfolio profits with low-risk by sensing the returns and using them to reinforce 
-         its performance without fitting the data, this uses the goodness of the recent updating action 
-         on the current state of the algorithm. The allocations are obtained incrementally in forward 
+         its performance without fitting the data. The allocations are obtained incrementally in forward 
          manner by passing the data through the network and modifying the weights (with immediate rewards 
          from the previous results) using a modern stochastic training technique.</p><br>
       </td>
