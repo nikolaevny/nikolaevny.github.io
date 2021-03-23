@@ -41,37 +41,128 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <br>
 <table width="100%" cellpadding="5" cellspacing="0" border="0">
 
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Efficient Computation of Sparse Risk-based Portfolios using Machine Learning</i></b>.
+         The risk-based approaches to portfolio construction are modern alternatives to the Markowitz 
+         approach to asset management. These approaches seek portfolio allocations that diversify the risk, 
+         rather than capital allocations. The rationale is that a proper diversification can enhance the 
+         profits as it can be more resistant to market fluctuations. This is achieved by balancing the 
+         exposure to higher-risk assets with lower-risk assets, so that less volatile assets receive 
+         increased weights. Such portfolios are computed with optimization routines using risk diversification 
+         measures. These measures are defined by functions that depend on the asset volatilities, and the 
+         total portfolio volatility but do not depend directly on the returns of the individual assets.</p>
+
+      <p>Our research developed an efficient (reliable and fast) tool for finding sparse risk-based portfolios 
+         using a machine learning algorithm. This is a universal tool which simultaneously perfroms portfolio 
+         selection and diversification while searching for asset allocations. Its distinguishing feature is 
+         a projection algorithm that jointly selects and estimates constrained weights efficiently with explicit 
+         update equations (without running procedures for quadratic programming). The learning algorithm minimizes 
+         iteratively the objective function in one direction at each time step, and also accomodates cardinality 
+         constraints to obtain sparse results. Technically speaking, the algorithm minimizes successively quadratic 
+         loss functions by computing Euclidean projections in a greedy manner. It is different from the primal 
+         projected gradient search algorithm which does not facilitate sparsity. That is why, the tool is especially 
+         suitable for solving high-dimensional risk-based portfolios with capital constraints.</p><br>
+      </td>
+    </td>
+</tr>
+
 
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="GANplot.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="RBMRr1.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Generative Adversarial Networks for Machine Learning of Constrained Portfolios</i></b>.
-         The mean-variance portfolio (MVP) theory is a fundamental framework for rational investment
-         management. It provides formulations for building profitable portfolios with reduced risk, which are
-         extended by adding various constraints (like budgeting, no-shorting, leveraging, etc.) to ensure their 
-         practical usefulness. The constrained formulations often lead however to non-convex optimization
-         problems that are difficult to solve even by the well known Quadratic Programming (QP) approach.</p>
-      <p>Our research developed a machine learning tool for constraint portfolio optimization using 
-         a Generative Adversarial Network (GAN). The GAN is a composite model of a generator network 
-         and a discriminator network that play adversarial game in which each tries to influence the other, 
-         while being controlled by different parameters. The generator learns to produce samples from the 
-         distribution of the data. The discriminator evaluates the feasibility of the drawn samples and decides 
-         whether they are realistic or fake. We designed the generator using a Deep Neural Network (DNN) 
-         for representing synthetic distributions of portfolio weights (stock allocations). A uniform 
-         random prior is passed as input, propagated forward through the network, and the network output 
-         returns a weights vector sample (without forecasting returns on prices as in some previous works). 
-         The discriminator applies analytical formulae to compute optimal weights which suggest a reference
-         mean-variance portfolio for comparisons. During the optimization process the discrepancy between 
-         the assumed optimal weights and the sampled weights decreases, and the generator converges to 
-         a better estimator of the weights distribution leading to portfolios with improved performance. 
-         The advantage of this approach is that it has capacity to learn fast the weights distribution 
-         in nonparametric fashion.</p><br>
+      <p><b><i>Bayesian Machine Learning for Robust On-line Portfolio Selection</i></b>.
+         The predominant amount of trades on the biggest stock markets in the world are currently done 
+         automatically. Electronic trading is conducted using various kinds of algorithms, like for example 
+         portfolio robo-advisors. Such on-line portfolio selection algorithms calculate asset allocations 
+         sequentially with the arrival of stock price data. At every time instant when stock prices arrive 
+         the allocations are re-estimated to take into account the new information from the market. The 
+         objective of on-line portfolio investing is maximization of the cumulative wealth with minimum risk. 
+         The allocations (weights) indicate the portions of wealth to be transferred between the assets. The 
+         activity of buying and selling corresponding fractions of assets is called rebalancing.</p>
+
+      <p>Our research developed a robust on-line portfolio construction tool using Bayesian machine 
+         learning. We apply variational Bayesian inference to derive a learning algorithm for robust
+         regression, which is especially suitable for processing financial time series typically contaminated 
+         by large amounts of noise. The original feature of our tool is a Bayesian learning algorithm for
+         calibrating heavy-tailed models of returns on prices (based on an approximation of the Student-t 
+         density by an infinite mixture of Gaussians). After pre-processing the price series with this algorithm, 
+         sequential estimation of the weights is accomplished with stochastic gradient descent search for 
+         solving the portfolio optimization problem. The optimization problem involves minimizing the deviation
+         from the previous weights, and the distance from the mean reversion threshold. The motivation is to 
+         keep the portfolio close to the previous one, and to rebalance it when the return increases above 
+         the threshold. The threshold parameter is estimated at every time step using a discrete version of 
+         the Ornstein-Uhlenbeck stochastic differential equation.</p><br>
       </td>
     </td>
 </tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLSPITf.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Learning of Small Portfolios for Index Tracking with Reduced Risk</i></b>.
+         Index tracking is a popular investment strategy for building portfolios 
+         of assets that replicate closely the movement of a benchmark index. The key idea is to find 
+         optimal subsets of assets (partial replication) that regularly outperform the market. This is
+         accomplished by extracting a few representative assets that can be traded with less transaction 
+         costs and reduced risk. The management risk can be reduced using small portfolios which 
+         faithfully represent the hidden structure of the market (that is, the relationships between the 
+         index constituents), and decrease the exposure to unimportant assets.</p>
+      <p>Our research developed an original approach to building small portfolios through deep learning 
+         of sparse autoencoder (SAE) models. The SAE models are trained using specialized topology 
+         reshaping techniques which help to identify less complex models that capture the essential 
+         structure in the data. We elaborate two techniques that enforce reshaping: 1) soft sparsification 
+         with size-adjusting regularization that drives the irrelevant hidden node outputs to zero, and 
+         2) hard sparsification by explicit pruning of redundant hidden nodes without loss of accuracy 
+         (using predefined importance criteria). The desirable sparsity level (percentage of nodes to be
+         truncated) is controlled  with a cardinality parameter which allows to set the desirable size of the
+         investment. The SAE are also made robust to error fluctuations using the heavy-tailed (Student-t)
+         density to handle the output noise. This improves the learning dynamics in addition to using 
+         modern stochastic gradient training algorithms. The practical effect from such robust 
+         treatment of the model is lower variability of the results and risk reduction.</p><br>
+      </td>
+    </td>
+</tr>
+
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLAEPRT.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Deep Learning Autoencoders for Building Principal Component Portfolios</i></b>.
+         Portfolio arbitrage is a practical economic task that searches for profitable investment allocations in 
+         a selected universe of stocks. The dynamics of multiple financial price series from a portfolio of stocks 
+         may be considered to be driven by a number of common economic factors as well as idiosyncratic terms. This 
+         idea stimulates the research into machine learning methods which investigate hidden factor models of cross-covariances 
+         between asset prices. Two popular methods for finding latent factors are the Principal Component Analysis (PCA) and 
+         the Autoencoders (AE). They help to discover combinations of stocks (market factor) that explain most of the variance 
+         in the selection (systematic risk). Having such factors facilitate the creation of market neutral portfolios by treating 
+         the remaining idiosyncratic risk as a mean-reverting (Ornstein-Uhlenbeck) spread process.</p>
+      <p>Our research develops efficient portfolio trading tools using Autoencoder networks that discover principal components 
+         via Bayesian treatment of the model. Following Variational Bayesian inference we obtain analytical formulae for all model 
+         parameters (including the noise variance and the individual regularizers for each weight). The AE performs weighted 
+         encoding of the inputs into a lower dimensional space, and next weighted decoding of the compressed copy back to an 
+         approximate version in the original space (using a non-Gussian reconstruction error model). The inferred weights, 
+         corresponding to the eigenvectors of the covariance matrix, are taken to calculate the allocations for the stocks in the 
+         eigenportfolio. More precisely, we construct an eigenportfolio as a linear combination of all stocks which are allocated 
+         contributions according to their corresponding coefficients in the first principal component (that is, the combination
+         explains the maximal variance in the data).</p><br>
+      </td>
+    </td>
+</tr>
+
 
 <tr>
     <td align="left" width="2%" valign="top">
@@ -263,65 +354,33 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="RBMRr1.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="GANplot.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Bayesian Machine Learning for Robust On-line Portfolio Selection</i></b>.
-         The predominant amount of trades on the biggest stock markets in the world are currently done 
-         automatically. Electronic trading is conducted using various kinds of algorithms, like for example 
-         portfolio robo-advisors. Such on-line portfolio selection algorithms calculate asset allocations 
-         sequentially with the arrival of stock price data. At every time instant when stock prices arrive 
-         the allocations are re-estimated to take into account the new information from the market. The 
-         objective of on-line portfolio investing is maximization of the cumulative wealth with minimum risk. 
-         The allocations (weights) indicate the portions of wealth to be transferred between the assets. The 
-         activity of buying and selling corresponding fractions of assets is called rebalancing.</p>
-
-      <p>Our research developed a robust on-line portfolio construction tool using Bayesian machine 
-         learning. We apply variational Bayesian inference to derive a learning algorithm for robust
-         regression, which is especially suitable for processing financial time series typically contaminated 
-         by large amounts of noise. The original feature of our tool is a Bayesian learning algorithm for
-         calibrating heavy-tailed models of returns on prices (based on an approximation of the Student-t 
-         density by an infinite mixture of Gaussians). After pre-processing the price series with this algorithm, 
-         sequential estimation of the weights is accomplished with stochastic gradient descent search for 
-         solving the portfolio optimization problem. The optimization problem involves minimizing the deviation
-         from the previous weights, and the distance from the mean reversion threshold. The motivation is to 
-         keep the portfolio close to the previous one, and to rebalance it when the return increases above 
-         the threshold. The threshold parameter is estimated at every time step using a discrete version of 
-         the Ornstein-Uhlenbeck stochastic differential equation.</p><br>
-      </td>
-    </td>
-</tr>
-
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLSPITf.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Learning of Small Portfolios for Index Tracking with Reduced Risk</i></b>.
-         Index tracking is a popular investment strategy for building portfolios 
-         of assets that replicate closely the movement of a benchmark index. The key idea is to find 
-         optimal subsets of assets (partial replication) that regularly outperform the market. This is
-         accomplished by extracting a few representative assets that can be traded with less transaction 
-         costs and reduced risk. The management risk can be reduced using small portfolios which 
-         faithfully represent the hidden structure of the market (that is, the relationships between the 
-         index constituents), and decrease the exposure to unimportant assets.</p>
-      <p>Our research developed an original approach to building small portfolios through deep learning 
-         of sparse autoencoder (SAE) models. The SAE models are trained using specialized topology 
-         reshaping techniques which help to identify less complex models that capture the essential 
-         structure in the data. We elaborate two techniques that enforce reshaping: 1) soft sparsification 
-         with size-adjusting regularization that drives the irrelevant hidden node outputs to zero, and 
-         2) hard sparsification by explicit pruning of redundant hidden nodes without loss of accuracy 
-         (using predefined importance criteria). The desirable sparsity level (percentage of nodes to be
-         truncated) is controlled  with a cardinality parameter which allows to set the desirable size of the
-         investment. The SAE are also made robust to error fluctuations using the heavy-tailed (Student-t)
-         density to handle the output noise. This improves the learning dynamics in addition to using 
-         modern stochastic gradient training algorithms. The practical effect from such robust 
-         treatment of the model is lower variability of the results and risk reduction.</p><br>
+      <p><b><i>Generative Adversarial Networks for Machine Learning of Constrained Portfolios</i></b>.
+         The mean-variance portfolio (MVP) theory is a fundamental framework for rational investment
+         management. It provides formulations for building profitable portfolios with reduced risk, which are
+         extended by adding various constraints (like budgeting, no-shorting, leveraging, etc.) to ensure their 
+         practical usefulness. The constrained formulations often lead however to non-convex optimization
+         problems that are difficult to solve even by the well known Quadratic Programming (QP) approach.</p>
+      <p>Our research developed a machine learning tool for constraint portfolio optimization using 
+         a Generative Adversarial Network (GAN). The GAN is a composite model of a generator network 
+         and a discriminator network that play adversarial game in which each tries to influence the other, 
+         while being controlled by different parameters. The generator learns to produce samples from the 
+         distribution of the data. The discriminator evaluates the feasibility of the drawn samples and decides 
+         whether they are realistic or fake. We designed the generator using a Deep Neural Network (DNN) 
+         for representing synthetic distributions of portfolio weights (stock allocations). A uniform 
+         random prior is passed as input, propagated forward through the network, and the network output 
+         returns a weights vector sample (without forecasting returns on prices as in some previous works). 
+         The discriminator applies analytical formulae to compute optimal weights which suggest a reference
+         mean-variance portfolio for comparisons. During the optimization process the discrepancy between 
+         the assumed optimal weights and the sampled weights decreases, and the generator converges to 
+         a better estimator of the weights distribution leading to portfolios with improved performance. 
+         The advantage of this approach is that it has capacity to learn fast the weights distribution 
+         in nonparametric fashion.</p><br>
       </td>
     </td>
 </tr>
@@ -389,64 +448,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLAEPRT.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Learning Autoencoders for Building Principal Component Portfolios</i></b>.
-         Portfolio arbitrage is a practical economic task that searches for profitable investment allocations in 
-         a selected universe of stocks. The dynamics of multiple financial price series from a portfolio of stocks 
-         may be considered to be driven by a number of common economic factors as well as idiosyncratic terms. This 
-         idea stimulates the research into machine learning methods which investigate hidden factor models of cross-covariances 
-         between asset prices. Two popular methods for finding latent factors are the Principal Component Analysis (PCA) and 
-         the Autoencoders (AE). They help to discover combinations of stocks (market factor) that explain most of the variance 
-         in the selection (systematic risk). Having such factors facilitate the creation of market neutral portfolios by treating 
-         the remaining idiosyncratic risk as a mean-reverting (Ornstein-Uhlenbeck) spread process.</p>
-      <p>Our research develops efficient portfolio trading tools using Autoencoder networks that discover principal components 
-         via Bayesian treatment of the model. Following Variational Bayesian inference we obtain analytical formulae for all model 
-         parameters (including the noise variance and the individual regularizers for each weight). The AE performs weighted 
-         encoding of the inputs into a lower dimensional space, and next weighted decoding of the compressed copy back to an 
-         approximate version in the original space (using a non-Gussian reconstruction error model). The inferred weights, 
-         corresponding to the eigenvectors of the covariance matrix, are taken to calculate the allocations for the stocks in the 
-         eigenportfolio. More precisely, we construct an eigenportfolio as a linear combination of all stocks which are allocated 
-         contributions according to their corresponding coefficients in the first principal component (that is, the combination
-         explains the maximal variance in the data).</p><br>
-      </td>
-    </td>
-</tr>
-
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Efficient Computation of Sparse Risk-based Portfolios using Machine Learning</i></b>.
-         The risk-based approaches to portfolio construction are modern alternatives to the Markowitz 
-         approach to asset management. These approaches seek portfolio allocations that diversify the risk, 
-         rather than capital allocations. The rationale is that a proper diversification can enhance the 
-         profits as it can be more resistant to market fluctuations. This is achieved by balancing the 
-         exposure to higher-risk assets with lower-risk assets, so that less volatile assets receive 
-         increased weights. Such portfolios are computed with optimization routines using risk diversification 
-         measures. These measures are defined by functions that depend on the asset volatilities, and the 
-         total portfolio volatility but do not depend directly on the returns of the individual assets.</p>
-
-      <p>Our research developed an efficient (reliable and fast) tool for finding sparse risk-based portfolios 
-         using a machine learning algorithm. This is a universal tool which simultaneously perfroms portfolio 
-         selection and diversification while searching for asset allocations. Its distinguishing feature is 
-         a projection algorithm that jointly selects and estimates constrained weights efficiently with explicit 
-         update equations (without running procedures for quadratic programming). The learning algorithm minimizes 
-         iteratively the objective function in one direction at each time step, and also accomodates cardinality 
-         constraints to obtain sparse results. Technically speaking, the algorithm minimizes successively quadratic 
-         loss functions by computing Euclidean projections in a greedy manner. It is different from the primal 
-         projected gradient search algorithm which does not facilitate sparsity. That is why, the tool is especially 
-         suitable for solving high-dimensional risk-based portfolios with capital constraints.</p><br>
-      </td>
-    </td>
-</tr>
 
 <tr>
     <td align="left" width="2%" valign="top">
