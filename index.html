@@ -44,6 +44,43 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="OAPWD.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Overfitting Avoidance in Portfolio Construction using Probabilistic Neural Networks</i></b>.
+         Portfolio construction and many financial problem solving tasks involve modeling returns on 
+         prices. The popular approach is to take the means of the historic returns, but it does not 
+         lead to optimal portfolios. Efficient portfolios can only be built with predicted returns 
+         that peek into the future behaviour of prices. Since returns on prices are almost impossible 
+         to model and predict accurately, even plausible forecasts are acceptable in practice. The 
+         problem is that many researchers usually adopt standard function approximation models, which 
+         however are theoretically inconvenient. The reason is that returns are random fluctuations 
+         of a discrete Geometric Brownian Motion, and they can not be captured well by such function 
+         approximation models (like Neural Networks, Support Vector Machines, Gaussian Processes, etc.). 
+         Moreover, these models are trained with algorithms that seek to minimize the fitting error and this 
+         causes overfitting. That is why, these function approximation models models can not provide 
+         reliable predictions of returns.</p>
+
+      <p>Our research developed an original tool for portfolio construction based on the probabilistic 
+         GRNN model. The key idea is to represent the returns from the stocks in the portfolio with a 
+         multivariate distribution. The novel Multivariate General Regression Neural Network (MGRNN) 
+         forecasts simultaneously the returns of several stocks without assuming a specific functional 
+         form, and it learns a probability density. The MGRNN technology has three distinguishing features: 
+         1) its network architecture has multiple outputs (there is a separate output for the mean return 
+         of each stock); 2) it has an individual spread parameter for each stock (thus the density shape 
+         is made proportional to the effective range of each particular stock), and these parameters are 
+         trained in a principled way using a second-order learning algorithm with analytical derivatives; 
+         and 3) it eliminates the unessential inputs by soft pruning (this reduces, sparsifies the model), 
+         and further helps to avoid overfitting. The advantage of MGRNN for financial time series 
+         prediction is that it generates local response to the testing input, instead of making global 
+         approximation which can actually cause distortions in modeling the current trend.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
@@ -219,6 +256,41 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Fcmdlvm.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Forecasting Covariance Matrices via Deep Learning of Volatility Models</i></b>.
+         The task of portfolio construction involves search for asset allocations that can bring 
+         maximum profit with minimum risk. A key element in the mean-variance portfolio (MVP) framework 
+         is the covariance matrix (with second order moments) of returns. The challenge is to find 
+         faithful and useful estimates of the covariance matrix which lead to profitable portfolios on
+         out-of-sample data. The covariances are often calculated by Exponentially Weighted Moving 
+         Averaging (EWMA) of historical returns. This sample-based approach however does not deliver 
+         good performance in practice. Recent research achieves improved results using approaches that 
+         forecast the covariances, like the Dynamic Conditional Correlation (DCC-GARCH), and the 
+         Generalized Principal Volatility Components (GPVC) analysis. Common in these approaches 
+         is that they build multivariate volatility models.</p>
+
+      <p>Our research developed a deep learning tool for multivariate nonlinear MNGARCH volatility
+         models, which is suitable for construction of variance-based portfolios. This tool provides 
+         several original features: 1) it uses nonlinearities for enhancing the model potential to 
+         describe complex patterns in financial time series; 2) it treats the model with a proper
+         temporal training algorithm which tracks the time-varying characteristics in the data and 
+         preserves the model dynamics; and 3) it uses the t-Student distribution in the training objective 
+         function for accurate fiting of data coming from heavy-tailed distributions (like returns on prices).
+         The MNGARCH  model is represented as a multi-output recurrent neural network. The network is
+         trained with a temporal gradient descent algorithm (called Back Propagation Through Time (BPTT)) 
+         after unfolding it in time. This algorithm creates a deep neural network structure by making 
+         temporal copies of the nodes, and duplicating the memory as well as the recurrent connections. 
+         The operation of the learning procedure is robust thanks to the adoption of the heavy-tailed noise 
+         distribution, and it is not disturbed by occasional outliers in the data.</p><br>
+      </td>
+    </td>
+</tr>
 
   <tr>
     <td align="left" width="2%" valign="top">
