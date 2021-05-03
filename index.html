@@ -104,31 +104,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="SLOC.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i><a href="STLLMach.doc">Self-Tuning Local Learning Machines for Prediction of Stock Market 
-         Returns</a></i></b>.
-         Current advances in machine learning provide various sophisticated models for predicting financial time series. The selection of a proper
-         learning strategy is extremely important for the success of the time series modelling technology. Processing directly price series (after detrending) 
-         requires global methods of high dimensionality because such series typically feature long distance autocorrelations. For example, 
-         one can develop deep-memory models using internal or external memory. Processing returns on prices requires local models of low dimensionality 
-         as return series typically show low autocorrelations. The nearest neighbour approach to local learning is especially appropriate for describing
-         stock return movements because it is less affected by the changing autocorrelations in price series depending on the volatility. </p>
-      <p>Our research invented a Self-tuning Local Learning Machine (SLLM) that performs nearest neighbour regression especially for predicting 
-         financial time series. It performs self-adaptive translations of the neighbouring vectors during both phases selection and forecasting. The 
-         SLLM is original and involves two elaborated phases: 1) Invariant neighbour selection- it takes a predefined number of nearest patterns using an
-         invariant distance metric to determine the proximity after linear transformations of the vectors, the metric accounts for the changes in the 
-         magnitude and period for accurate estimation of the nearness; 2) Local movement extrapolation- the prediction is made by averaging over the 
-         future series movements after the neighbours. The predicted next series values accommodate effects from the adjusted shapes formed by the changes
-         in the series amplitude and trend. This is a kind of iterative extrapolation, rather than forecasting with coefficients obtained by fitting.</p><br>
-      </td>
-    </td>
-</tr>
-
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
@@ -700,6 +675,31 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          parameter estimates). This technique is further elaborated using adaptive learning rate 
          for switching between passive and aggressive updating depending on the 
          recent profitability.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="SLOC.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="STLLMach.doc">Self-Tuning Local Learning Machines for Prediction of Stock Market 
+         Returns</a></i></b>.
+         Current advances in machine learning provide various sophisticated models for predicting financial time series. The selection of a proper
+         learning strategy is extremely important for the success of the time series modelling technology. Processing directly price series (after detrending) 
+         requires global methods of high dimensionality because such series typically feature long distance autocorrelations. For example, 
+         one can develop deep-memory models using internal or external memory. Processing returns on prices requires local models of low dimensionality 
+         as return series typically show low autocorrelations. The nearest neighbour approach to local learning is especially appropriate for describing
+         stock return movements because it is less affected by the changing autocorrelations in price series depending on the volatility. </p>
+      <p>Our research invented a Self-tuning Local Learning Machine (SLLM) that performs nearest neighbour regression especially for predicting 
+         financial time series. It performs self-adaptive translations of the neighbouring vectors during both phases selection and forecasting. The 
+         SLLM is original and involves two elaborated phases: 1) Invariant neighbour selection- it takes a predefined number of nearest patterns using an
+         invariant distance metric to determine the proximity after linear transformations of the vectors, the metric accounts for the changes in the 
+         magnitude and period for accurate estimation of the nearness; 2) Local movement extrapolation- the prediction is made by averaging over the 
+         future series movements after the neighbours. The predicted next series values accommodate effects from the adjusted shapes formed by the changes
+         in the series amplitude and trend. This is a kind of iterative extrapolation, rather than forecasting with coefficients obtained by fitting.</p><br>
       </td>
     </td>
 </tr>
