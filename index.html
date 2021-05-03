@@ -44,10 +44,197 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="NMLAC.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="NMLACp.doc">Nonparametric Machine Learning for Algorithmic Cryptocurrency 
+         Trading</a></i></b>.
+         The cryptocurrencies are attractive for algorithmic trading because of their high volatility 
+         on the stock markets. The volatility can be exploited by converting a sequence of crypto 
+         prices into an oscillating series and simulating mean-reversion trading: buy when the series 
+         moves higher than the equilibrium level, and sell when it reverses back. A trading algorithm 
+         takes such decisions after estimating the price movement direction through historical or 
+         predictive time series analysis. Trading is more profitable when the algorithm can look into 
+         the future evolution of prices. The problem is that it is extremely difficult and practically 
+         impossible to predict accurately the stochastic behaviour of prices/returns (they are
+         assumed to follow a standard Brownian motion), so the task is to produce useful forecasts 
+         for their immediate trajectory. This can be accomplished with a proper description of their 
+         dynamics, and a corresponding learning mechanism like the nonparametric machine learning.</p>
+
+      <p>Our research developed a Self-adaptive Local Learning Machine (SLLM) for nonparametric
+         prediction of financial series of returns on prices. The SLLM implements the nearest 
+         neighbor method with two distinguishing features: 1) it performs neighbours selection 
+         using an adaptive distance metric [5] which evaluates closeness after linear transformation 
+         of the data patterns, that is the machine looks for similar shapes in the movement of  
+         returns by sliding the query across the historical returns while stretching, shrinking 
+         and amplifying the patterns; and 2) it performs distance-based extrapolation through 
+         local averaging proportional to the degree of similarity with the query vector, thus the 
+         forecast reflects the essential characteristics of the data trajectory. The SLLM is 
+         elaborated to generate forecasts of returns for algorithmic cryptocurrency trading. The 
+         return forecasts are converted to prices, and next taken to compute the residuals between 
+         the forecasted prices and the mean price from the most recent past. The crypto trading 
+         strategy parameters are obtained by treating the residuals as a mean-reverting 
+         (Ornstein-Uhlenbeck) process.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DMNN3.JPG" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="DMNNjan.doc">Deep-Memory Networks vs. Deep Learning Networks for Stock Market 
+         Prediction</a></i></b>.
+         The Deep Learning Networks (DLN) are popular tools for machine learning. The power of DLNs is in their ability to discover 
+         complex functions of real-world noisy data by composing hierarchically simple representations, technically speaking they learn 
+         to generalize by extracting features. The good results of DLN on data mining tasks motivated researchers to seek improved results 
+         in financial forecasting as well. There have been reported applications to modelling: exchange rates, stock returns, market indices, etc. 
+         The problem is that the application of DLNs to stock market modelling is not straightforward, and their suitability for such tasks has 
+         not been yet fully investigated.</p>
+      <p>Our research invented a novel tool Deep-Memory Neural Networks (DMNN) for machine learning from financial time series and stock
+         market forecasting. The rationale for making deep memory networks for stock market prediction is that financial time series often 
+         feature slowly decaying autocorrelations and this requires long-memory embeddings. The DMNN model takes lagged input vectors of predetermined 
+         depth, and is treated as a dynamical system using sequential Bayesian estimation to accommodate properly the temporal dimension. Thus, 
+         during training the DMNN becomes fitted to its full potential of being a dynamic machine that learns time-dependent functions, and this 
+         is its essential advantage over the other DLNs which are typically trained as static functions. There are implemented various filters that 
+         make the DMNN behave like nonlinear autoregressive models with time-varying parameters.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="SLOC.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="STLLMach.doc">Self-Tuning Local Learning Machines for Prediction of Stock Market 
+         Returns</a></i></b>.
+         Current advances in machine learning provide various sophisticated models for predicting financial time series. The selection of a proper
+         learning strategy is extremely important for the success of the time series modelling technology. Processing directly price series (after detrending) 
+         requires global methods of high dimensionality because such series typically feature long distance autocorrelations. For example, 
+         one can develop deep-memory models using internal or external memory. Processing returns on prices requires local models of low dimensionality 
+         as return series typically show low autocorrelations. The nearest neighbour approach to local learning is especially appropriate for describing
+         stock return movements because it is less affected by the changing autocorrelations in price series depending on the volatility. </p>
+      <p>Our research invented a Self-tuning Local Learning Machine (SLLM) that performs nearest neighbour regression especially for predicting 
+         financial time series. It performs self-adaptive translations of the neighbouring vectors during both phases selection and forecasting. The 
+         SLLM is original and involves two elaborated phases: 1) Invariant neighbour selection- it takes a predefined number of nearest patterns using an
+         invariant distance metric to determine the proximity after linear transformations of the vectors, the metric accounts for the changes in the 
+         magnitude and period for accurate estimation of the nearness; 2) Local movement extrapolation- the prediction is made by averaging over the 
+         future series movements after the neighbours. The predicted next series values accommodate effects from the adjusted shapes formed by the changes
+         in the series amplitude and trend. This is a kind of iterative extrapolation, rather than forecasting with coefficients obtained by fitting.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DNNAH.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="DNNFIM.doc">Deep Neural Networks for Prediction-based Portfolio Construction</a></i></b>.
+         Connectionist learning offers powerful modern technologies for quantitative modelling that can 
+         be used to reduce investment risk. It provides highly nonlinear models which are convenient 
+         for describing multivariate time series of returns on prices. Such connectionist machines that
+         become increasingly popular in financial engineering are the Deep Neural Networks (DNN). The DNN 
+         have already been applied to predict stock returns for building portfolios. The most popular 
+         deep networks for such tasks include the recurrent Long-Short Term Memory (LSTM) neural networks, 
+         the Deep Multilayer Perceptrons (DMLP), and the Convolutional Neural Networks (CNN). The attractive
+         fundamental concept underlying all these deep networks is nonlinearity. The nonlinearity is 
+         especially important when searching for models that generalise well, that is 
+         perform well on unseen future data.</p>
+
+      <p>Our research developed an original Robust DNN (RDNN) model with rectified and sigmoidal 
+         units especially for building prediction-based portfolios. This is a multi-output network that
+         captures time relationships in the data using a short-term memory through a tapped delay line from 
+         lagged observations. The major technological innovation in the RDNN is that it overcomes possible 
+         disturbances from outliers using the heavy-tailed (Student-t) noise distribution. Adopting the 
+         Student-t distribution for the noise is important for handling practical financial time series 
+         because the estimates can be affected severely by atypical observations. Moreover, the departure 
+         from Gaussianity affects the model selection and may lead to choosing a model with wrong 
+         complexity. We obtained robust derivatives are plugged them into a contemporary stochastic 
+         gradient descent training algorithm. The RDNN attains good generalization as it avoids overfitting 
+         using two techniques: structural sparsity (attained with the rectified units which induce sparsity) 
+         and dropout (which helps to avoid overtraining with the provided examples).</p><br>
+      </td>
+    </td>
+</tr>
+
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Bsbpml1.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="BSBPLSML.doc">Building Smart Beta Portfolios with Large-Scale Machine Learning</a></i></b>.
+         Smart Beta portfolios offer the investor possibility to choose exposures (betas) to specific 
+         factors that are assumed to be driving the market evolution. This is a strategy that seeks smart 
+         asset allocations using risk control schemes, rather than using traditional capitalization 
+         weighting. The aim is to outperform the market with balanced risk reduction via increased 
+         diversification (using measures that depend on correlations and volatilities, but do not 
+         depend directly on expected returns). The greater diversification brings reduced volatility 
+         and enhanced performance compared to other strategies like simple index tracking. The Smart Beta 
+         is usually implemented with less frequent rebalancing and is often classified as passive investment.</p>
+
+      <p>Our research developed a tool for computing low volatility Smart Beta portfolios using 
+         large-scale machine learning. The distinguishing contributions of our machine learning framework 
+         are: 1) a novel ADMM algorithm for constrained identification of Most Diversified Portfolios (MDP); 
+         2) stochastic gradient descent training algorithms with analytical derivatives for quadratic 
+         optimization and tracking error minimization; and 3) an algorithm for predictive estimation of 
+         covariance matrices according to the method of moments. The ADMM is a kind of machine learning 
+         algorithm which is especially suitable for large tasks as it splits them into subtasks that are 
+         better tackled separately. The tool is elaborated to learn allocations for long-only positions 
+         with desired target returns (tuned with appropriately chosen risk-aversion parameter). If 
+         necessary the sparsity can also be tuned dynamically with an available cardinality 
+         parameter.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Dlfmapp.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="DLDFMAP.doc">Deep Learning of Dynamic Factor Models for Asset Pricing</a></i></b>.
+         The large amount of transactions on the electronic exchanges today stimulates the 
+         development of computational algorithms for automated portfolio trading. These algorithms
+         continuously optimize the portfolio with the arrival of new information on the market. 
+         The optimization strategy typically includes asset pricing, asset selection and rebalancing.
+         A popular formalism for asset pricing are the factor models. A factor model describes the
+         relationships between assets by regressing their returns on unobservable latent variables
+         Such a model captures the dependencies between multiple return series into a small number
+         of correlations. The difficulty is to choose only a subset of factors which taken together
+         are profitable to trade, that is to select a parsimonious factor model.</p>
+
+      <p>Our research developed an original nonlinear dynamic factor model for asset pricing using 
+         a deep learning technology. We designed a dynamic factor model represented by a recurrent 
+         neural network with local memory that carries temporal information. The network is trained 
+         with a dynamic learning algorithm the BPTT (Backpropagation Through Time) which unfolds 
+         the model back in time to capture temporal dependencies. This is a deep learning mechanism 
+         because the unrolling creates a deep network structure. The BPTT is used to update the 
+         parameters of the hidden layer which produces the latent factors. The output layer computes 
+         the beta loadings. The strength of our model is that it predicts asset returns from inferred 
+         factor realizations, more precisely, the factors are forecasted arrangements of individual
+         asset contributions to the overall portfolio. The overall model is a time-dependent function
+         whose forecasts are less sensitive to noise and nonstationarities in the time series.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="OAPWD.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Overfitting Avoidance in Portfolio Construction using Probabilistic Neural Networks</i></b>.
+      <p><b><i><a href="OAPCPNN.doc">Overfitting Avoidance in Portfolio Construction using 
+         Probabilistic Neural Networks</a></i></b>.
          Portfolio construction and many financial problem solving tasks involve modeling returns on 
          prices. The popular approach is to take the means of the historic returns, but it does not 
          lead to optimal portfolios. Efficient portfolios can only be built with predicted returns 
@@ -84,7 +271,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="pwelth.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Efficient Computation of Sparse Risk-based Portfolios using Machine Learning</i></b>.
+      <p><b><i><a href="ECSRPML.doc">Efficient Computation of Sparse Risk-based Portfolios using Machine 
+         Learning</a></i></b>.
          The risk-based approaches to portfolio construction are modern alternatives to the Markowitz 
          approach to asset management. These approaches seek portfolio allocations that diversify the risk, 
          rather than capital allocations. The rationale is that a proper diversification can enhance the 
@@ -115,7 +303,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="RBMRr1.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Bayesian Machine Learning for Robust On-line Portfolio Selection</i></b>.
+      <p><b><i><a href="BMLROPC.doc">Bayesian Machine Learning for Robust On-line Portfolio 
+         Selection</a></i></b>.
          The predominant amount of trades on the biggest stock markets in the world are currently done 
          automatically. Electronic trading is conducted using various kinds of algorithms, like for example 
          portfolio robo-advisors. Such on-line portfolio selection algorithms calculate asset allocations 
@@ -147,7 +336,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLSPITf.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Learning of Small Portfolios for Index Tracking with Reduced Risk</i></b>.
+      <p><b><i><a href="DLSPIT.doc">Deep Learning of Small Portfolios for Index Tracking with Reduced 
+         Risk</a></i></b>.
          Index tracking is a popular investment strategy for building portfolios 
          of assets that replicate closely the movement of a benchmark index. The key idea is to find 
          optimal subsets of assets (partial replication) that regularly outperform the market. This is
@@ -178,7 +368,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLAEPRT.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Learning Autoencoders for Building Principal Component Portfolios</i></b>.
+      <p><b><i><a href="DLABPCPd.doc">Deep Learning Autoencoders for Building Principal Component 
+         Portfolios</a></i></b>.
          Portfolio arbitrage is a practical economic task that searches for profitable investment allocations in 
          a selected universe of stocks. The dynamics of multiple financial price series from a portfolio of stocks 
          may be considered to be driven by a number of common economic factors as well as idiosyncratic terms. This 
@@ -207,7 +398,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="STARB.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Machine Learning of Heavy-Tailed Dynamic Spread Models for Statistical Arbitrage</i></b>.
+      <p><b><i><a href="PTRDlin.doc">Machine Learning of Heavy-Tailed Dynamic Spread Models for Statistical 
+         Arbitrage</a></i></b>.
          Statistical arbitrage is a trading strategy that analyzes the dynamics of mispricing in combinations of assets 
          with the aim to exploit deviations from equilibrium levels in the markets, and generate buy/sell trading signals (so as 
          to make profits before participants eliminate the arbitrage opportunities). The statarb technology identifies systematic 
@@ -233,7 +425,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="DCM.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Cleaning of Covariance Matrices for Portfolio Allocation</i></b>.
+      <p><b><i><a href="DCCMPA.doc">Deep Cleaning of Covariance Matrices for Portfolio Allocation</a></i></b>.
          Covariance matrices are important in modern portfolio theory as they provide information about 
          the collective movement of asset prices and help to achieve efficient portfolio selection. The 
          covariance matrix shows the interactions between assets, and indicates which combinations can 
@@ -263,7 +455,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="Fcmdlvm.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Forecasting Covariance Matrices via Deep Learning of Volatility Models</i></b>.
+      <p><b><i><a href="FCMDLVM.doc">Forecasting Covariance Matrices via Deep Learning of Volatility 
+         Models</a></i></b>.
          The task of portfolio construction involves search for asset allocations that can bring 
          maximum profit with minimum risk. A key element in the mean-variance portfolio (MVP) framework 
          is the covariance matrix (with second order moments) of returns. The challenge is to find 
@@ -292,39 +485,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DNNAH.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Neural Networks for Prediction-based Portfolio Construction</i></b>.
-         Connectionist learning offers powerful modern technologies for quantitative modelling that can 
-         be used to reduce investment risk. It provides highly nonlinear models which are convenient 
-         for describing multivariate time series of returns on prices. Such connectionist machines that
-         become increasingly popular in financial engineering are the Deep Neural Networks (DNN). The DNN 
-         have already been applied to predict stock returns for building portfolios. The most popular 
-         deep networks for such tasks include the recurrent Long-Short Term Memory (LSTM) neural networks, 
-         the Deep Multilayer Perceptrons (DMLP), and the Convolutional Neural Networks (CNN). The attractive
-         fundamental concept underlying all these deep networks is nonlinearity. The nonlinearity is 
-         especially important when searching for models that generalise well, that is 
-         perform well on unseen future data.</p>
-
-      <p>Our research developed an original Robust DNN (RDNN) model with rectified and sigmoidal 
-         units especially for building prediction-based portfolios. This is a multi-output network that
-         captures time relationships in the data using a short-term memory through a tapped delay line from 
-         lagged observations. The major technological innovation in the RDNN is that it overcomes possible 
-         disturbances from outliers using the heavy-tailed (Student-t) noise distribution. Adopting the 
-         Student-t distribution for the noise is important for handling practical financial time series 
-         because the estimates can be affected severely by atypical observations. Moreover, the departure 
-         from Gaussianity affects the model selection and may lead to choosing a model with wrong 
-         complexity. We obtained robust derivatives are plugged them into a contemporary stochastic 
-         gradient descent training algorithm. The RDNN attains good generalization as it avoids overfitting 
-         using two techniques: structural sparsity (attained with the rectified units which induce sparsity) 
-         and dropout (which helps to avoid overtraining with the provided examples).</p><br>
-      </td>
-    </td>
-</tr>
 
   <tr>
     <td align="left" width="2%" valign="top">
@@ -332,7 +492,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="CRLplot2.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Efficient Direct Reinforcement Learning of Low-risk Portfolios</i></b>.
+      <p><b><i><a href="ECRLP.doc">Efficient Direct Reinforcement Learning of Low-risk Portfolios</a></i></b>.
          Reinforcement Learning (RL) shows encouraging results for computing automated investment 
          strategies. The RL paradigm offers procedures that easily accomodate risk-adjusted performance 
          functions and facilitate portfolio optimization without forecasting models. The RL algorithms 
@@ -359,39 +519,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          from the previous results) using a modern stochastic training technique.</p><br>
       </td>
     </td>
-</tr>
-
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Dlfmapp.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Learning of Dynamic Factor Models for Asset Pricing</i></b>.
-         The large amount of transactions on the electronic exchanges today stimulates the 
-         development of computational algorithms for automated portfolio trading. These algorithms
-         continuously optimize the portfolio with the arrival of new information on the market. 
-         The optimization strategy typically includes asset pricing, asset selection and rebalancing.
-         A popular formalism for asset pricing are the factor models. A factor model describes the
-         relationships between assets by regressing their returns on unobservable latent variables
-         Such a model captures the dependencies between multiple return series into a small number
-         of correlations. The difficulty is to choose only a subset of factors which taken together
-         are profitable to trade, that is to select a parsimonious factor model.</p>
-
-      <p>Our research developed an original nonlinear dynamic factor model for asset pricing using 
-         a deep learning technology. We designed a dynamic factor model represented by a recurrent 
-         neural network with local memory that carries temporal information. The network is trained 
-         with a dynamic learning algorithm the BPTT (Backpropagation Through Time) which unfolds 
-         the model back in time to capture temporal dependencies. This is a deep learning mechanism 
-         because the unrolling creates a deep network structure. The BPTT is used to update the 
-         parameters of the hidden layer which produces the latent factors. The output layer computes 
-         the beta loadings. The strength of our model is that it predicts asset returns from inferred 
-         factor realizations, more precisely, the factors are forecasted arrangements of individual
-         asset contributions to the overall portfolio. The overall model is a time-dependent function
-         whose forecasts are less sensitive to noise and nonstationarities in the time series.</p><br>
-      </td>
-    </td>
-</tr>
+</tr> 
 
   <tr>
     <td align="left" width="2%" valign="top">
@@ -399,7 +527,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="MSAR.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Regime-based Machine Learning of Green Stock Portfolios</i></b>.
+      <p><b><i><a href="RBMLGSP.doc">Regime-based Machine Learning of Green Stock Portfolios</a></i></b>.
          There is widely accepted empirical evidence in finance that the patterns in the markets change 
          over time, and the assumprion is that prices are not generated by a single economic regime. The
          prevailing opinion is that the stock markets evolve through bullish and bearish periods. This suggests
@@ -432,7 +560,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="GANplot.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Generative Adversarial Networks for Machine Learning of Constrained Portfolios</i></b>.
+      <p><b><i><a href="GANMLCP.doc">Generative Adversarial Networks for Machine Learning of Constrained 
+         Portfolios</a></i></b>.
          The mean-variance portfolio (MVP) theory is a fundamental framework for rational investment
          management. It provides formulations for building profitable portfolios with reduced risk, which are
          extended by adding various constraints (like budgeting, no-shorting, leveraging, etc.) to ensure their 
@@ -460,41 +589,10 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Bsbpml1.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Building Smart Beta Portfolios with Large-Scale Machine Learning</i></b>.
-         Smart Beta portfolios offer the investor possibility to choose exposures (betas) to specific 
-         factors that are assumed to be driving the market evolution. This is a strategy that seeks smart 
-         asset allocations using risk control schemes, rather than using traditional capitalization 
-         weighting. The aim is to outperform the market with balanced risk reduction via increased 
-         diversification (using measures that depend on correlations and volatilities, but do not 
-         depend directly on expected returns). The greater diversification brings reduced volatility 
-         and enhanced performance compared to other strategies like simple index tracking. The Smart Beta 
-         is usually implemented with less frequent rebalancing and is often classified as passive investment.</p>
-
-      <p>Our research developed a tool for computing low volatility Smart Beta portfolios using 
-         large-scale machine learning. The distinguishing contributions of our machine learning framework 
-         are: 1) a novel ADMM algorithm for constrained identification of Most Diversified Portfolios (MDP); 
-         2) stochastic gradient descent training algorithms with analytical derivatives for quadratic 
-         optimization and tracking error minimization; and 3) an algorithm for predictive estimation of 
-         covariance matrices according to the method of moments. The ADMM is a kind of machine learning 
-         algorithm which is especially suitable for large tasks as it splits them into subtasks that are 
-         better tackled separately. The tool is elaborated to learn allocations for long-only positions 
-         with desired target returns (tuned with appropriately chosen risk-aversion parameter). If 
-         necessary the sparsity can also be tuned dynamically with an available cardinality 
-         parameter.</p><br>
-      </td>
-    </td>
-</tr>
-
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="Svmprtf.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Support Vector Machine Learning of Sparse Portfolios</i></b>.
+      <p><b><i><a href="SVMLSP.doc">Support Vector Machine Learning of Sparse Portfolios</a></i></b>.
          The portfolio construction task involves finding an optimal subset of assets for 
          investment and estimating their allocations. An efficient method for solving both tasks 
          simultaneously is to use high-dimensional regression models (where asset prices/returns 
@@ -527,7 +625,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="CLSTSOM.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i>Finding Structure in the Co-movement of Stock Prices via Adaptive Metric Unsupervised Learning</i></b>.
+      <p><b><i><a href="Fscmsamul.doc">Finding Structure in the Co-movement of Stock Prices via Adaptive
+         Metric Unsupervised Learning</a></i></b>.
          Building portfolios involves stock selection by searching for relationships in the stock prices movements. 
          Having determined the connections between the stocks one can partition them into clusters and apply various
          techniques for making portfolios. A clustering algorithm places time series into groups of similar elements 
@@ -541,6 +640,89 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          update more precisely the cluster centroids. Stable performance is achieved using an incremental gradient 
          descent training of the centroids. The architecture of the the self-organizing network is considered 
          a two-dimensional rectangular lattice. The center weights are initialized with a random number generator.</p><br>
+      </td>
+    </td>
+</tr>
+
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="RPOPCM.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="RPOCML.doc">Robust Portfolio Optimization via Connectionist Machine Learning</a></i></b>.
+         The Mean-Variance Portfolio (MVP) of Markowitz is a popular model for investment diversification and management that helps 
+         to achieve maximized profits with reduced risk. It involves search for the amount of money to invest in each asset given the 
+         sample covariance matrix of asset returns, which is a constrained quadratic programming (QP) problem typically addressed using 
+         standard optimization routines. The QP in context of large scale financial applications is a difficult problem because the sample 
+         covariance matrix of stock returns is very noisy and this misleads the optimization procedures. The practical complication is that 
+         standard optimizers tend to overfit the noise while searching for solutions, and this leads to suboptimal results. One strategy for 
+         dealing with the noise is through statistical cleaning of the covariance matrix in advance.</p>
+      <p>Our research developed a QP optimizer with an embedded Multilayer Perceptron that elaborates on the good features of both: optimizers
+         with stable convergence and neural networks with robust calibration. We implemented an original Connectionist Optimization Machine (COM) 
+         suitable for finding portfolio allocations. Its distinctive features are: 1) it conducts second-order search using the analytical 
+         derivatives of the neural network model,which leads to improved accuracy compared to the use of numerical derivatives (computed by differencing),
+         and 2) it performs input denoising simultaneously with the learning of the model parameters, that is it removes the noise from the sample 
+         covariance matrix during calibration. It should be noted that adopting the framework of classical QP optimizers enables easy accommodation 
+         of various constraints in the training procedures.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DRKOP.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="OPTDRL.doc">Online Portfolio Trading by Dynamic Reinforcement Learning</a></i></b>.
+         The computerized trading systems become increasingly popular due to the electronic nature 
+         of the transactions executed on most of the stock markets. Among the various computational 
+         algorithms for financial investing increasingly popular become the machine learning algorithms 
+         for building portfolios of assets. These learning machines offer potential for finding optimal 
+         allocations and suggest efficient rebalancing which helps to maximize profits while minimizing 
+         the risk. They carry out not simply statistical analyis of data, but also identify temporal 
+         dependencies that are useful for describing the evolution of sequentially arriving 
+         asset prices. Having such capacity is useful when searching for profitable 
+         allocations in a selected universe of stocks.</p>
+
+      <p>Our research developed a Reinforcement Learning machine for Online Portfolio trading (RLOP) 
+         using a recurrent neural network. The network model takes as inputs series of returns from 
+         the assets in the portfolio, and outputs allocations for each asset (the current version 
+         generates long only trading sugnals). The recurrent network is suitable for representing 
+         financial series as it is especially designed to learn from sequential data via an 
+         internal memory. The memory maintains short-term temporal information which influences 
+         subsequent outputs. This network is a dynamic model that we treat with a proper dynamic 
+         training algorithm, the so called BackPropagation Through time (BPTT). A distinguishing 
+         feature of our machine is that we implement the BPTT with a modern stochastic gradient 
+         descent technique for computing the temporal derivatives (it helps to obtain unbiased 
+         parameter estimates). This technique is further elaborated using adaptive learning rate 
+         for switching between passive and aggressive updating depending on the 
+         recent profitability.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLGARCH.JPG" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="DLGARCHfeb.doc">Deep Learning of Heteroskedastic Volatility Models for Risk Estimation</a></i></b>.
+         The volatility (changing variance) in time series of returns on assets impacts the pricing of financial instruments, and it is 
+         a key concept in automated algorithmic trading, option pricing, portfolio management and financial market regulation. The common assumption 
+         is that the return volatility is highly predictable. Popular tools for capturing the variance of the return distribution are the Generalized                           Autoregressive Conditional Heteroscedastic (GARCH) models. These models however are difficult to estimate (typically by maximum likelihood 
+         optimization) and suffer from mistakes, which limits their practical usefulness. </p>
+      <p>Our research developed a deep learning algorithm for dynamic heteroskedastic volatility models (D2GARCH) made as recurrent neural networks.
+         The learning algorithm for D2GARCH creates a deep connectionist structure by unrolling the network in time. The unravelling is a process of
+         transforming the temporal correlations into spatial relationships. The temporally dependent nodes and the recurrent connections are duplicated
+         at each time instant, which leads to a deep topology of unfolded layers with shifted in time inputs trainable with static gradient-based 
+         algorithms. Then, the error is backpropagated through time (BPTT) in the sense that it is passed backward through the unrolled in time network,
+         and the model parameters are adapted gradually to reflect the time ordering in the data sequence. Since the temporal error gradient decays and 
+         may vanish due to the unfolding (so it fails to contribute to the learning process), we apply the Kalman filtering technique [11] to diminish 
+         such effects and to speed up the convergence.</p><br>
       </td>
     </td>
 </tr>
@@ -578,55 +760,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="RPOPCM.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Robust Portfolio Optimization via Connectionist Machine Learning</i></b>.
-         The Mean-Variance Portfolio (MVP) of Markowitz is a popular model for investment diversification and management that helps 
-         to achieve maximized profits with reduced risk. It involves search for the amount of money to invest in each asset given the 
-         sample covariance matrix of asset returns, which is a constrained quadratic programming (QP) problem typically addressed using 
-         standard optimization routines. The QP in context of large scale financial applications is a difficult problem because the sample 
-         covariance matrix of stock returns is very noisy and this misleads the optimization procedures. The practical complication is that 
-         standard optimizers tend to overfit the noise while searching for solutions, and this leads to suboptimal results. One strategy for 
-         dealing with the noise is through statistical cleaning of the covariance matrix in advance.</p>
-      <p>Our research developed a QP optimizer with an embedded Multilayer Perceptron that elaborates on the good features of both: optimizers
-         with stable convergence and neural networks with robust calibration. We implemented an original Connectionist Optimization Machine (COM) 
-         suitable for finding portfolio allocations. Its distinctive features are: 1) it conducts second-order search using the analytical 
-         derivatives of the neural network model,which leads to improved accuracy compared to the use of numerical derivatives (computed by differencing),
-         and 2) it performs input denoising simultaneously with the learning of the model parameters, that is it removes the noise from the sample 
-         covariance matrix during calibration. It should be noted that adopting the framework of classical QP optimizers enables easy accommodation 
-         of various constraints in the training procedures.</p><br>
-      </td>
-    </td>
-</tr>
-
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DMNN3.JPG" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Deep-Memory Networks vs. Deep Learning Networks for Stock Market Prediction</i></b>.
-         The Deep Learning Networks (DLN) are popular tools for machine learning. The power of DLNs is in their ability to discover 
-         complex functions of real-world noisy data by composing hierarchically simple representations, technically speaking they learn 
-         to generalize by extracting features. The good results of DLN on data mining tasks motivated researchers to seek improved results 
-         in financial forecasting as well. There have been reported applications to modelling: exchange rates, stock returns, market indices, etc. 
-         The problem is that the application of DLNs to stock market modelling is not straightforward, and their suitability for such tasks has 
-         not been yet fully investigated.</p>
-      <p>Our research invented a novel tool Deep-Memory Neural Networks (DMNN) for machine learning from financial time series and stock
-         market forecasting. The rationale for making deep memory networks for stock market prediction is that financial time series often 
-         feature slowly decaying autocorrelations and this requires long-memory embeddings. The DMNN model takes lagged input vectors of predetermined 
-         depth, and is treated as a dynamical system using sequential Bayesian estimation to accommodate properly the temporal dimension. Thus, 
-         during training the DMNN becomes fitted to its full potential of being a dynamic machine that learns time-dependent functions, and this 
-         is its essential advantage over the other DLNs which are typically trained as static functions. There are implemented various filters that 
-         make the DMNN behave like nonlinear autoregressive models with time-varying parameters.</p><br>
-      </td>
-    </td>
-</tr>
-
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="PAIRTRD.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
@@ -643,29 +776,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
         non-stationary financial time series. The spread is represented via regimes of high and low means, and this helps to predict when it reaches 
         extremal points before returning back to equilibrium. After that, regime dependent arbitrage rules are applied to make profitable risk-neutral 
         market strategies.</p><br>
-      </td>
-    </td>
-</tr>
-
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DLGARCH.JPG" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Deep Learning of Heteroskedastic Volatility Models for Risk Estimation</i></b>.
-         The volatility (changing variance) in time series of returns on assets impacts the pricing of financial instruments, and it is 
-         a key concept in automated algorithmic trading, option pricing, portfolio management and financial market regulation. The common assumption 
-         is that the return volatility is highly predictable. Popular tools for capturing the variance of the return distribution are the Generalized                           Autoregressive Conditional Heteroscedastic (GARCH) models. These models however are difficult to estimate (typically by maximum likelihood 
-         optimization) and suffer from mistakes, which limits their practical usefulness. </p>
-      <p>Our research developed a deep learning algorithm for dynamic heteroskedastic volatility models (D2GARCH) made as recurrent neural networks.
-         The learning algorithm for D2GARCH creates a deep connectionist structure by unrolling the network in time. The unravelling is a process of
-         transforming the temporal correlations into spatial relationships. The temporally dependent nodes and the recurrent connections are duplicated
-         at each time instant, which leads to a deep topology of unfolded layers with shifted in time inputs trainable with static gradient-based 
-         algorithms. Then, the error is backpropagated through time (BPTT) in the sense that it is passed backward through the unrolled in time network,
-         and the model parameters are adapted gradually to reflect the time ordering in the data sequence. Since the temporal error gradient decays and 
-         may vanish due to the unfolding (so it fails to contribute to the learning process), we apply the Kalman filtering technique [11] to diminish 
-         such effects and to speed up the convergence.</p><br>
       </td>
     </td>
 </tr>
@@ -720,30 +830,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="SLOC.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Self-Tuning Local Learning Machines for Prediction of Stock Market Returns</i></b>.
-         Current advances in machine learning provide various sophisticated models for predicting financial time series. The selection of a proper
-         learning strategy is extremely important for the success of the time series modelling technology. Processing directly price series (after detrending) 
-         requires global methods of high dimensionality because such series typically feature long distance autocorrelations. For example, 
-         one can develop deep-memory models using internal or external memory. Processing returns on prices requires local models of low dimensionality 
-         as return series typically show low autocorrelations. The nearest neighbour approach to local learning is especially appropriate for describing
-         stock return movements because it is less affected by the changing autocorrelations in price series depending on the volatility. </p>
-      <p>Our research invented a Self-tuning Local Learning Machine (SLLM) that performs nearest neighbour regression especially for predicting 
-         financial time series. It performs self-adaptive translations of the neighbouring vectors during both phases selection and forecasting. The 
-         SLLM is original and involves two elaborated phases: 1) Invariant neighbour selection- it takes a predefined number of nearest patterns using an
-         invariant distance metric to determine the proximity after linear transformations of the vectors, the metric accounts for the changes in the 
-         magnitude and period for accurate estimation of the nearness; 2) Local movement extrapolation- the prediction is made by averaging over the 
-         future series movements after the neighbours. The predicted next series values accommodate effects from the adjusted shapes formed by the changes
-         in the series amplitude and trend. This is a kind of iterative extrapolation, rather than forecasting with coefficients obtained by fitting.</p><br>
-      </td>
-    </td>
-</tr>
-
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="NikStrd.JPG" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
@@ -765,39 +851,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DRKOP.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Online Portfolio Trading by Dynamic Reinforcement Learning</i></b>.
-         The computerized trading systems become increasingly popular due to the electronic nature 
-         of the transactions executed on most of the stock markets. Among the various computational 
-         algorithms for financial investing increasingly popular become the machine learning algorithms 
-         for building portfolios of assets. These learning machines offer potential for finding optimal 
-         allocations and suggest efficient rebalancing which helps to maximize profits while minimizing 
-         the risk. They carry out not simply statistical analyis of data, but also identify temporal 
-         dependencies that are useful for describing the evolution of sequentially arriving 
-         asset prices. Having such capacity is useful when searching for profitable 
-         allocations in a selected universe of stocks.</p>
-
-      <p>Our research developed a Reinforcement Learning machine for Online Portfolio trading (RLOP) 
-         using a recurrent neural network. The network model takes as inputs series of returns from 
-         the assets in the portfolio, and outputs allocations for each asset (the current version 
-         generates long only trading sugnals). The recurrent network is suitable for representing 
-         financial series as it is especially designed to learn from sequential data via an 
-         internal memory. The memory maintains short-term temporal information which influences 
-         subsequent outputs. This network is a dynamic model that we treat with a proper dynamic 
-         training algorithm, the so called BackPropagation Through time (BPTT). A distinguishing 
-         feature of our machine is that we implement the BPTT with a modern stochastic gradient 
-         descent technique for computing the temporal derivatives (it helps to obtain unbiased 
-         parameter estimates). This technique is further elaborated using adaptive learning rate 
-         for switching between passive and aggressive updating depending on the 
-         recent profitability.</p><br>
-      </td>
-    </td>
-</tr>
 
 <tr>
     <td align="left" width="2%" valign="top">
