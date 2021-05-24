@@ -64,7 +64,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
       <p>Our research developed a Self-adaptive Local Learning Machine (SLLM) for nonparametric
          prediction of financial series of returns on prices. The SLLM implements the nearest 
          neighbor method with two distinguishing features: 1) it performs neighbours selection 
-         using an adaptive distance metric [5] which evaluates closeness after linear transformation 
+         using an adaptive distance metric which evaluates closeness after linear transformation 
          of the data patterns, that is the machine looks for similar shapes in the movement of  
          returns by sliding the query across the historical returns while stretching, shrinking 
          and amplifying the patterns; and 2) it performs distance-based extrapolation through 
@@ -82,27 +82,70 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DMNN3.JPG" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="GANplot.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i><a href="DMNNjan.doc">Deep-Memory Networks vs. Deep Learning Networks for Stock Market 
-         Prediction</a></i></b>.
-         The Deep Learning Networks (DLN) are popular tools for machine learning. The power of DLNs is in their ability to discover 
-         complex functions of real-world noisy data by composing hierarchically simple representations, technically speaking they learn 
-         to generalize by extracting features. The good results of DLN on data mining tasks motivated researchers to seek improved results 
-         in financial forecasting as well. There have been reported applications to modelling: exchange rates, stock returns, market indices, etc. 
-         The problem is that the application of DLNs to stock market modelling is not straightforward, and their suitability for such tasks has 
-         not been yet fully investigated.</p>
-      <p>Our research invented a novel tool Deep-Memory Neural Networks (DMNN) for machine learning from financial time series and stock
-         market forecasting. The rationale for making deep memory networks for stock market prediction is that financial time series often 
-         feature slowly decaying autocorrelations and this requires long-memory embeddings. The DMNN model takes lagged input vectors of predetermined 
-         depth, and is treated as a dynamical system using sequential Bayesian estimation to accommodate properly the temporal dimension. Thus, 
-         during training the DMNN becomes fitted to its full potential of being a dynamic machine that learns time-dependent functions, and this 
-         is its essential advantage over the other DLNs which are typically trained as static functions. There are implemented various filters that 
-         make the DMNN behave like nonlinear autoregressive models with time-varying parameters.</p><br>
+      <p><b><i><a href="GANMLCP.doc">Generative Adversarial Networks for Machine Learning of Constrained 
+         Portfolios</a></i></b>.
+         The mean-variance portfolio (MVP) theory is a fundamental framework for rational investment
+         management. It provides formulations for building profitable portfolios with reduced risk, which are
+         extended by adding various constraints (like budgeting, no-shorting, leveraging, etc.) to ensure their 
+         practical usefulness. The constrained formulations often lead however to non-convex optimization
+         problems that are difficult to solve even by the well known Quadratic Programming (QP) approach.</p>
+      <p>Our research developed a machine learning tool for constraint portfolio optimization using 
+         a Generative Adversarial Network (GAN). The GAN is a composite model of a generator network 
+         and a discriminator network that play adversarial game in which each tries to influence the other, 
+         while being controlled by different parameters. The generator learns to produce samples from the 
+         distribution of the data. The discriminator evaluates the feasibility of the drawn samples and decides 
+         whether they are realistic or fake. We designed the generator using a Deep Neural Network (DNN) 
+         for representing synthetic distributions of portfolio weights (stock allocations). A uniform 
+         random prior is passed as input, propagated forward through the network, and the network output 
+         returns a weights vector sample (without forecasting returns on prices as in some previous works). 
+         The discriminator applies analytical formulae to compute optimal weights which suggest a reference
+         mean-variance portfolio for comparisons. During the optimization process the discrepancy between 
+         the assumed optimal weights and the sampled weights decreases, and the generator converges to 
+         a better estimator of the weights distribution leading to portfolios with improved performance. 
+         The advantage of this approach is that it has capacity to learn fast the weights distribution 
+         in nonparametric fashion.</p><br>
       </td>
     </td>
 </tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="CRLplot2.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="ECRLP.doc">Efficient Direct Reinforcement Learning of Low-risk Portfolios</a></i></b>.
+         Reinforcement Learning (RL) shows encouraging results for computing automated investment 
+         strategies. The RL paradigm offers procedures that easily accomodate risk-adjusted performance 
+         functions and facilitate portfolio optimization without forecasting models. The RL algorithms 
+         continuosly maximize the objective function by taking actions without explicitly provided 
+         targets, that is using only inputs and feedbacks on their performance. This algorithmic 
+         capacity to take behavioural decisions makes them especially convenient for the design of 
+         reliable portfolio trading systems. The two main RL methods currently studied as alternatives 
+         for financial portfolio construction and trading are: 1) value-based (Q-learning), 
+         and 2) policy-based (Direct Reinforcement) learning. ). The theoretical and empirical studies 
+         recommend the Direct Reinforcement (DR) learning as a potentially better mechanism for 
+         finding profitable portfolios.</p>
+
+      <p>Our research developed a Connectionist Reinforcement Learning machine for efficient computation 
+         of Online Portfolios (CRLOP). This is a multi-output feedforward neural network where each 
+         network output generates allocation for a particular asset in the portfolio and the inputs pass 
+         lagged returns from the corresponding asset prices. The network is trained with an original
+         hybrid risk-return optimization function, which includes the Sharpe ratio and an additional 
+         term that accounts for the risk asymmetrically (this term discounts the effects from the loosing 
+         trades). This is necessary to overcome the equal treatment of high profits and heavy losses in 
+         the symmetric standard deviation formula. During training the network adapts the weights to 
+         achieve higher portfolio profits with low-risk by sensing the returns and using them to reinforce 
+         its performance without fitting the data. The allocations are obtained incrementally in forward 
+         manner by passing the data through the network and modifying the weights (with immediate rewards 
+         from the previous results) using a modern stochastic training technique.</p><br>
+      </td>
+    </td>
+</tr> 
+
 
   <tr>
     <td align="left" width="2%" valign="top">
@@ -138,6 +181,63 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DMNN3.JPG" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="DMNNjan.doc">Deep-Memory Networks vs. Deep Learning Networks for Stock Market 
+         Prediction</a></i></b>.
+         The Deep Learning Networks (DLN) are popular tools for machine learning. The power of DLNs is in their ability to discover 
+         complex functions of real-world noisy data by composing hierarchically simple representations, technically speaking they learn 
+         to generalize by extracting features. The good results of DLN on data mining tasks motivated researchers to seek improved results 
+         in financial forecasting as well. There have been reported applications to modelling: exchange rates, stock returns, market indices, etc. 
+         The problem is that the application of DLNs to stock market modelling is not straightforward, and their suitability for such tasks has 
+         not been yet fully investigated.</p>
+      <p>Our research invented a novel tool Deep-Memory Neural Networks (DMNN) for machine learning from financial time series and stock
+         market forecasting. The rationale for making deep memory networks for stock market prediction is that financial time series often 
+         feature slowly decaying autocorrelations and this requires long-memory embeddings. The DMNN model takes lagged input vectors of predetermined 
+         depth, and is treated as a dynamical system using sequential Bayesian estimation to accommodate properly the temporal dimension. Thus, 
+         during training the DMNN becomes fitted to its full potential of being a dynamic machine that learns time-dependent functions, and this 
+         is its essential advantage over the other DLNs which are typically trained as static functions. There are implemented various filters that 
+         make the DMNN behave like nonlinear autoregressive models with time-varying parameters.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="MSAR.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="RBMLGSP.doc">Regime-based Machine Learning of Green Stock Portfolios</a></i></b>.
+         There is widely accepted empirical evidence in finance that the patterns in the markets change 
+         over time, and the assumprion is that prices are not generated by a single economic regime. The
+         prevailing opinion is that the stock markets evolve through bullish and bearish periods. This suggests
+         that portfolio managers should vary the invested asset proportions with the shifts in market behaviour.
+         The econometric research already designed regime-switching (RS) models, that account for assumed 
+         changes in the economic variables. These are sophisticated models which identify abrupt structural 
+         alterations in the dynamics of asset prices. There have been reported various applications 
+         of these RS models to portfolio construction tasks. The key idea is to achieve optimal asset 
+         allocations via extraction of regimes in the market fluctuations.</p>
+
+      <p>Our research developed a computational tool for building portfolios under regime-switching. The
+         rationale is that the exploitation of market regimes helps us to find more accurate model parameters.
+         We assume that the returns of a market tracking portfolio follow a two-regime-switching model 
+         (alternate between bull and bear periods). The overall regime-based model reproduces realistically 
+         the occasional breaks in the mean, and allows us to create really good portfolios. A distinguishing
+         feature of our tool is that we have implemented a Markov Regime-Switching (MRS) model. Its regimes 
+         are separated by distinct means and volatilities, while the lagged input coefficients are common 
+         for both submodels. The switching parameters are calibrated with the Hamilton’s filter, and the 
+         Kim’s smoother. The two sets of asset betas are estimated using a Bayesian machine learning 
+         technique and next processed in a dynamic mean-variance setting. At each moment in time the 
+         portfolio weights are calculated dependent on the particular regime, that is the
+         portfolio is conditioned on the regimes.</p><br>
+      </td>
+    </td>
+</tr>
 
   <tr>
     <td align="left" width="2%" valign="top">
@@ -464,106 +564,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="CRLplot2.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i><a href="ECRLP.doc">Efficient Direct Reinforcement Learning of Low-risk Portfolios</a></i></b>.
-         Reinforcement Learning (RL) shows encouraging results for computing automated investment 
-         strategies. The RL paradigm offers procedures that easily accomodate risk-adjusted performance 
-         functions and facilitate portfolio optimization without forecasting models. The RL algorithms 
-         continuosly maximize the objective function by taking actions without explicitly provided 
-         targets, that is using only inputs and feedbacks on their performance. This algorithmic 
-         capacity to take behavioural decisions makes them especially convenient for the design of 
-         reliable portfolio trading systems. The two main RL methods currently studied as alternatives 
-         for financial portfolio construction and trading are: 1) value-based (Q-learning), 
-         and 2) policy-based (Direct Reinforcement) learning. ). The theoretical and empirical studies 
-         recommend the Direct Reinforcement (DR) learning as a potentially better mechanism for 
-         finding profitable portfolios.</p>
-
-      <p>Our research developed a Connectionist Reinforcement Learning machine for efficient computation 
-         of Online Portfolios (CRLOP). This is a multi-output feedforward neural network where each 
-         network output generates allocation for a particular asset in the portfolio and the inputs pass 
-         lagged returns from the corresponding asset prices. The network is trained with an original
-         hybrid risk-return optimization function, which includes the Sharpe ratio and an additional 
-         term that accounts for the risk asymmetrically (this term discounts the effects from the loosing 
-         trades). This is necessary to overcome the equal treatment of high profits and heavy losses in 
-         the symmetric standard deviation formula. During training the network adapts the weights to 
-         achieve higher portfolio profits with low-risk by sensing the returns and using them to reinforce 
-         its performance without fitting the data. The allocations are obtained incrementally in forward 
-         manner by passing the data through the network and modifying the weights (with immediate rewards 
-         from the previous results) using a modern stochastic training technique.</p><br>
-      </td>
-    </td>
-</tr> 
-
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="MSAR.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i><a href="RBMLGSP.doc">Regime-based Machine Learning of Green Stock Portfolios</a></i></b>.
-         There is widely accepted empirical evidence in finance that the patterns in the markets change 
-         over time, and the assumprion is that prices are not generated by a single economic regime. The
-         prevailing opinion is that the stock markets evolve through bullish and bearish periods. This suggests
-         that portfolio managers should vary the invested asset proportions with the shifts in market behaviour.
-         The econometric research already designed regime-switching (RS) models, that account for assumed 
-         changes in the economic variables. These are sophisticated models which identify abrupt structural 
-         alterations in the dynamics of asset prices. There have been reported various applications 
-         of these RS models to portfolio construction tasks. The key idea is to achieve optimal asset 
-         allocations via extraction of regimes in the market fluctuations.</p>
-
-      <p>Our research developed a computational tool for building portfolios under regime-switching. The
-         rationale is that the exploitation of market regimes helps us to find more accurate model parameters.
-         We assume that the returns of a market tracking portfolio follow a two-regime-switching model 
-         (alternate between bull and bear periods). The overall regime-based model reproduces realistically 
-         the occasional breaks in the mean, and allows us to create really good portfolios. A distinguishing
-         feature of our tool is that we have implemented a Markov Regime-Switching (MRS) model. Its regimes 
-         are separated by distinct means and volatilities, while the lagged input coefficients are common 
-         for both submodels. The switching parameters are calibrated with the Hamilton’s filter, and the 
-         Kim’s smoother. The two sets of asset betas are estimated using a Bayesian machine learning 
-         technique and next processed in a dynamic mean-variance setting. At each moment in time the 
-         portfolio weights are calculated dependent on the particular regime, that is the
-         portfolio is conditioned on the regimes.</p><br>
-      </td>
-    </td>
-</tr>
-
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="GANplot.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i><a href="GANMLCP.doc">Generative Adversarial Networks for Machine Learning of Constrained 
-         Portfolios</a></i></b>.
-         The mean-variance portfolio (MVP) theory is a fundamental framework for rational investment
-         management. It provides formulations for building profitable portfolios with reduced risk, which are
-         extended by adding various constraints (like budgeting, no-shorting, leveraging, etc.) to ensure their 
-         practical usefulness. The constrained formulations often lead however to non-convex optimization
-         problems that are difficult to solve even by the well known Quadratic Programming (QP) approach.</p>
-      <p>Our research developed a machine learning tool for constraint portfolio optimization using 
-         a Generative Adversarial Network (GAN). The GAN is a composite model of a generator network 
-         and a discriminator network that play adversarial game in which each tries to influence the other, 
-         while being controlled by different parameters. The generator learns to produce samples from the 
-         distribution of the data. The discriminator evaluates the feasibility of the drawn samples and decides 
-         whether they are realistic or fake. We designed the generator using a Deep Neural Network (DNN) 
-         for representing synthetic distributions of portfolio weights (stock allocations). A uniform 
-         random prior is passed as input, propagated forward through the network, and the network output 
-         returns a weights vector sample (without forecasting returns on prices as in some previous works). 
-         The discriminator applies analytical formulae to compute optimal weights which suggest a reference
-         mean-variance portfolio for comparisons. During the optimization process the discrepancy between 
-         the assumed optimal weights and the sampled weights decreases, and the generator converges to 
-         a better estimator of the weights distribution leading to portfolios with improved performance. 
-         The advantage of this approach is that it has capacity to learn fast the weights distribution 
-         in nonparametric fashion.</p><br>
-      </td>
-    </td>
-</tr>
-
-  <tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="Svmprtf.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
@@ -682,6 +682,44 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="CRLplot2.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="ACTSODLn.doc">Algorithmic Cryptocurrency Trading with Sharpe-optimal Deep Learning</a></i></b>.
+         Algorithmic trading uses computer programs to analyze market data and generate trading 
+         signals with suitable models. Particularly appropriate for such tasks are the neural networks 
+         due to their ability to learn flexible nonlinear models with good predictive capacity. The 
+         problem is how exactly to train these networks on financial price data so as to produce 
+         useful trading decisions, because prices are very difficult (practically impossible) to 
+         forecast. Since prices are considered to follow Geometric Brownian Motion, it can not be 
+         expected the neural network learning machinery will induce sufficient predictive potential 
+         simply by fitting the data with error-minimization procedures. Better results can be obtained 
+         by training the neural network parameters on price returns using directly a financial objective 
+         instead of a fitting criterion. Thus, the model can be adapted just to capture the directional 
+         fluctuations in the given series which are sufficient for sending trading signals. The financial  
+         objective to achieve high profits with low risk can be specified with different formulae, 
+         like the Sharpe ratio for example.</p>
+
+      <p>Our research developed a Sharpe-optimal Deep Learning (SDL) machine suitable for 
+         high-frequency algorithmic trading. A feedforward deep neural network is elaborated to 
+         predict the position size (which serve as a corresponding buy/sell trading signal) given 
+         a time series of  relative price returns. The deep neural network brings increased flexibility 
+         for enhanced nonlinear modeling through a tuneable multilayer structure, including rectified
+         units (leading to sparsity) and sigmoidal units (providing nonlinearity). The network model 
+         is trained with a risk-adjusting backpropagation algorithm that implements gradient ascent 
+         in the performance space. The performance is measured with a modified Sharpe ratio that 
+         discounts effects from the loosing trades. This helps to overcome equal treatment of high 
+         profits with heavy loses in the alternative standard deviation formula. During training the 
+         neural network continuously improves its skills to take useful trading decsisions (without 
+         external supervised help).</p><br>
+      </td>
+    </td>
+</tr> 
+
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="SLOC.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
@@ -721,7 +759,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          at each time instant, which leads to a deep topology of unfolded layers with shifted in time inputs trainable with static gradient-based 
          algorithms. Then, the error is backpropagated through time (BPTT) in the sense that it is passed backward through the unrolled in time network,
          and the model parameters are adapted gradually to reflect the time ordering in the data sequence. Since the temporal error gradient decays and 
-         may vanish due to the unfolding (so it fails to contribute to the learning process), we apply the Kalman filtering technique [11] to diminish 
+         may vanish due to the unfolding (so it fails to contribute to the learning process), we apply the Kalman filtering technique to diminish 
          such effects and to speed up the convergence.</p><br>
       </td>
     </td>
