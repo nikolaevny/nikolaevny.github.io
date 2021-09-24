@@ -44,37 +44,35 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="NMLAC.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="MLkNNdtw.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i><a href="NMLACp.doc">Nonparametric Machine Learning for Algorithmic Cryptocurrency 
+      <p><b><i><a href="MLDTPATr.doc">Machine Learning with Dynamic Time Patterns for Algorithmic
          Trading</a></i></b>.
-         The cryptocurrencies are attractive for algorithmic trading because of their high volatility 
-         on the stock markets. The volatility can be exploited by converting a sequence of crypto 
-         prices into an oscillating series and simulating mean-reversion trading: buy when the series 
-         moves higher than the equilibrium level, and sell when it reverses back. A trading algorithm 
-         takes such decisions after estimating the price movement direction through historical or 
-         predictive time series analysis. Trading is more profitable when the algorithm can look into 
-         the future evolution of prices. The problem is that it is extremely difficult and practically 
-         impossible to predict accurately the stochastic behaviour of prices/returns (they are
-         assumed to follow a standard Brownian motion), so the task is to produce useful forecasts 
-         for their immediate trajectory. This can be accomplished with a proper description of their 
-         dynamics, and a corresponding learning mechanism like the nonparametric machine learning.</p>
+         The algorithmic trading frameworks typically include estimation of time series models 
+         often performed through machine learning. Handling financial series of prices/returns 
+         is a very difficult task, however, because they are randon fluctuations (more precisely
+         they are commonly assumed to follow standard Brownian motion. That is why, the popular 
+         global function models can not capture global mappings in such series and can not 
+         forecast well. Applied to financial time series of prices/returns the global function 
+         models simply produce outputs with time delay (phase lagging) that are useless for 
+         algorithmic trading. When addressing such tasks one should rather look for solutions 
+         with alternative local models, like the k-Nearest Neighbors (kNN) algorithm. 
+         The kNN provides a technique for computing the probability density function of the 
+         data using only selected close patterns (neighbors) to the query.</p>
 
-      <p>Our research developed a Self-adaptive Local Learning Machine (SLLM) for nonparametric
-         prediction of financial series of returns on prices. The SLLM implements the nearest 
-         neighbor method with two distinguishing features: 1) it performs neighbours selection 
-         using an adaptive distance metric which evaluates closeness after linear transformation 
-         of the data patterns, that is the machine looks for similar shapes in the movement of  
-         returns by sliding the query across the historical returns while stretching, shrinking 
-         and amplifying the patterns; and 2) it performs distance-based extrapolation through 
-         local averaging proportional to the degree of similarity with the query vector, thus the 
-         forecast reflects the essential characteristics of the data trajectory. The SLLM is 
-         elaborated to generate forecasts of returns for algorithmic cryptocurrency trading. The 
-         return forecasts are converted to prices, and next taken to compute the residuals between 
-         the forecasted prices and the mean price from the most recent past. The crypto trading 
-         strategy parameters are obtained by treating the residuals as a mean-reverting 
-         (Ornstein-Uhlenbeck) process.</p><br>
+      <p>Our research developed a nearest neighbour based machine learning tool (kNN-DTW) for 
+         nonparametric forecasting of time series using dynamic time patterns. The tool has two 
+         distinguishing features: 1) it implements an original statistical DTW for robust matching 
+         of temporal patterns, which uses standardization of the distance norm by the volatility
+         of the series (this prevents the comparisons from distortions by abnormal noise, and 
+         helps to obtain results with close volatility to the current situation); and 2) it 
+         implements individual weighting of the neighbors. These features together make the 
+         kNN-DTW tool more noise tolerant, and more accurate on predicting real-world financial 
+         time series. The experimental results on intraday exchange rates series indicate that 
+         the novel kNN-DTW machine outperforms the other nearest neighbour based algorithms, 
+         using alternative contemporary distance measures, as it achieves higher profits with 
+         lower risk.</p><br>
       </td>
     </td>
 </tr>
@@ -336,6 +334,44 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          and further helps to avoid overfitting. The advantage of MGRNN for financial time series 
          prediction is that it generates local response to the testing input, instead of making global 
          approximation which can actually cause distortions in modeling the current trend.</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="NMLAC.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="NMLACp.doc">Nonparametric Machine Learning for Algorithmic Cryptocurrency 
+         Trading</a></i></b>.
+         The cryptocurrencies are attractive for algorithmic trading because of their high volatility 
+         on the stock markets. The volatility can be exploited by converting a sequence of crypto 
+         prices into an oscillating series and simulating mean-reversion trading: buy when the series 
+         moves higher than the equilibrium level, and sell when it reverses back. A trading algorithm 
+         takes such decisions after estimating the price movement direction through historical or 
+         predictive time series analysis. Trading is more profitable when the algorithm can look into 
+         the future evolution of prices. The problem is that it is extremely difficult and practically 
+         impossible to predict accurately the stochastic behaviour of prices/returns (they are
+         assumed to follow a standard Brownian motion), so the task is to produce useful forecasts 
+         for their immediate trajectory. This can be accomplished with a proper description of their 
+         dynamics, and a corresponding learning mechanism like the nonparametric machine learning.</p>
+
+      <p>Our research developed a Self-adaptive Local Learning Machine (SLLM) for nonparametric
+         prediction of financial series of returns on prices. The SLLM implements the nearest 
+         neighbor method with two distinguishing features: 1) it performs neighbours selection 
+         using an adaptive distance metric which evaluates closeness after linear transformation 
+         of the data patterns, that is the machine looks for similar shapes in the movement of  
+         returns by sliding the query across the historical returns while stretching, shrinking 
+         and amplifying the patterns; and 2) it performs distance-based extrapolation through 
+         local averaging proportional to the degree of similarity with the query vector, thus the 
+         forecast reflects the essential characteristics of the data trajectory. The SLLM is 
+         elaborated to generate forecasts of returns for algorithmic cryptocurrency trading. The 
+         return forecasts are converted to prices, and next taken to compute the residuals between 
+         the forecasted prices and the mean price from the most recent past. The crypto trading 
+         strategy parameters are obtained by treating the residuals as a mean-reverting 
+         (Ornstein-Uhlenbeck) process.</p><br>
       </td>
     </td>
 </tr>
