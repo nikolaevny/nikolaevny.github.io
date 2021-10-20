@@ -55,19 +55,20 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          of mean-reverting trading strategies. One modern approach is to search for universal
          cointegration using the method of Convergent Cross Mapping (CCM) which assumes that
          a pair of series feature the same dynamics, and seeks to reconstruct it by a common 
-         function of past temporal patterns (known as neighbors). the CCM uses the k-Nearest
+         function of past temporal patterns (known as neighbors). The CCM uses the k-Nearest
          Neighbor (kNN) algorithm to look for nearest neighbors in each of the
          series that can be coupled in a cross-mapping.</p>
 
       <p>Our research developed a pairs trading tool based on universal cointegration 
-         elaborated with the CCM method. The CCM learns to reproduce the causal dynamics of 
-         pairs from time series by constructing a mutual function that takes close neighbors 
-         as arguments. We designed a specialized kNN algorithm for local machine learning 
-         from interdependent financial time series. This kNN algorithm has two original, 
-         distinguishing aspects: 1) invariant neighbour selection- it calculates similarity 
-         after making adjustments to the amplitudes and periods of the candidate temporal 
-         patterns; and 2) mutual centroid prediction- it computes future time series values 
-         by combining data from coupled nearest neighbors and weighting the succeeding points 
+         elaborated with the CCM method. The CCM reproduces the causal dynamics of 
+         pairs from time series by constructing a mutual function that takes close 
+         temporal neighbors as arguments. We designed a specialized kNN algorithm for 
+         local machine learning from interdependent financial time series. This kNN 
+         algorithm has two original, distinguishing aspects: 1) invariant nearest 
+         neighbour selection- it calculates similarity after making adjustments to the
+         amplitudes and periods of the candidate patterns; and 2) mutual centroid 
+         prediction- it computes future time series values by combining data from 
+         coupled nearest neighbors and distance-based weighting the succeeding points 
          after the precedents. This is a self-adaptive, noise-tolerant learning mechanism 
          whose output is tested to determine whether universal cointegration between the 
          given series exists. The significance of the series association is evaluated with
