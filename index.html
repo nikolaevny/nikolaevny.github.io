@@ -77,6 +77,41 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Lobpic.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="LPMDLOB.doc">Local Prediction of Mid-Prices in Limit Order Book Markets</a></i></b>.
+         The modern financial exchanges operate using Limit Order Books (LOB). The order 
+         book handles the buy/sell orders of an asset, depending on their price, size (quantity) 
+         and arrival time. The orders on the electronic markets are sent by algorithmic
+         trading machines that execute sophisticated strategies at high-frequencies. A trading 
+         algorithm can be successful if it predicts the movements of the asset prices/returns, 
+         otherwise simply relying on historical data is not sufficient for taking profitable 
+         trading decisions. The machine learning research offers efficient approaches that 
+         can be used to predict the movements in series of financial prices/returns, like local
+         learning using the k-Nearest Neighbor (kNN) algorithm. The kNN is a proper algorithm 
+         for nonparametric modelling of temporal data with complex dynamics. It builds the 
+         prediction using local dependencies, without training a global function model.</p>
+
+      <p>Our research developed a Local Trading Machine (LTM) for prediction and exploitation 
+         of the mid-price dynamics in limit order books. The LTM is based on the kNN regression 
+         algorithm, elaborated to manipulate high-frequency financial time series of returns on 
+         prices. The main distinguishing aspects of our computational tool are: 1) it seeks 
+         similar temporal patterns in the past with an adaptive distance metric for elastic 
+         matching through invariant transformations of the patterns (this helps to achieve more 
+         faithfull comparisons between segments of erratic data); and 2) it performs integrated 
+         forecasting using LOB imbalances (this helps to tune the outputs with respect to the 
+         supply and demand in the order book). These techniques make the operation of the kNN 
+         more resilient to the inherent noise and non-stationarity in series of returns. Since 
+         the algorithm flexibly reconstructs the series dynamics, it is able to react quickly 
+         to changes in the data and this facilitates composition of more accurate short-term 
+         forecasts.</p><br>
+      </td>
+    </td>
+</tr>
 
   <tr>
     <td align="left" width="2%" valign="top">
@@ -89,7 +124,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          The algorithmic trading frameworks typically include estimation of time series models 
          often performed through machine learning. Handling financial series of prices/returns 
          is a very difficult task, however, because they are randon fluctuations (more precisely
-         they are commonly assumed to follow standard Brownian motion. That is why, the popular 
+         they are commonly assumed to follow standard Brownian motion). That is why, the popular 
          global function models can not capture global mappings in such series and can not 
          forecast well. Applied to financial time series of prices/returns the global function 
          models simply produce outputs with time delay (phase lagging) that are useless for 
