@@ -44,35 +44,36 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="UcPTMLf.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Fmmblnn0.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i><a href="UCPTvML.doc">Universal Cointegration for Pairs Trading via Machine Learning</a></i></b>.
-         Pairs trading exploits arbitrage opportunities arising when the prices of two stocks 
-         with common trends diverge temporarily from their average relation. Statistical evidence 
-         for stable long-term common movements in price series can be obtained with the 
-         cointegration measure. The presense of cointegration facilitates the implementation 
-         of mean-reverting trading strategies. One modern approach is to search for universal
-         cointegration using the method of Convergent Cross Mapping (CCM) which assumes that
-         a pair of series feature the same dynamics, and seeks to reconstruct it by a common 
-         function of past temporal patterns (known as neighbors). The CCM uses the k-Nearest
-         Neighbor (kNN) algorithm to look for nearest neighbors in each of the
-         series that can be coupled in a cross-mapping.</p>
+      <p><b><i><a href="MMBLNN.doc">Market Making via Bayesian Learning with Nearest Neighbors</a></i></b>.
+         Automated market making (MM) is accomplished with algorithms that place simultaneously 
+         buy and sell orders for a given asset, seeking profits from their price difference. 
+         This kind of high-frequency trading algorithms [6] constantly readjust the orders to 
+         buy at lower (bid) prices and sell at higher (ask) prices so as to maintain and earn 
+         their difference (called spread). The task is to set such prices that get enough 
+         executions for achieving maximum profits with minimal risk. Setting the bid and ask 
+         quotes requires computation of the future spread or alternatively discovery of
+         the future mid-price (average of the best bid and ask prices). The MM mechanisms 
+         include also procedures for inventory management that are necessary to control 
+         the exposure risk arising from large price movements.</p>
 
-      <p>Our research developed a pairs trading tool based on universal cointegration 
-         elaborated with the CCM method. The CCM reproduces the causal dynamics of 
-         pairs from time series by constructing a mutual function that takes close 
-         temporal neighbors as arguments. We designed a specialized kNN algorithm for 
-         local machine learning from interdependent financial time series. This kNN 
-         algorithm has two original, distinguishing aspects: 1) invariant nearest 
-         neighbour selection- it calculates similarity after making adjustments to the
-         amplitudes and periods of the candidate patterns; and 2) mutual centroid 
-         prediction- it computes future time series values by combining data from 
-         coupled nearest neighbors and distance-based weighting the succeeding points 
-         after the precedents. This is a self-adaptive, noise-tolerant learning mechanism 
-         whose output is tested to determine whether universal cointegration between the 
-         given series exists. The significance of the series association is evaluated with
-         the Pearson correlation coefficient.</p><br>
+      <p>Our research developed a market making algorithm using Bayesian learning to 
+         infer the expected mid-price as suggested by information-based models, and the 
+         mid-price is next plugged in an inventory-based model to calculate the bid and ask 
+         quotes. The originality in our approach is that the information about the fundamental 
+         value of the stock is collected using nearest neighbour search, and then used to update 
+         in online manner the probability density of the mid-price. This algorithm performs 
+         local density approximation in the vicinity of the closest temporal patterns chosen 
+         with an appropriate distance measure. The rationale is that similar deterministic 
+         trends may persist for short periods during the evolution of the price. The k-Nearest 
+         Neighbour (kNN) method is applied to find close patterns (neighbors) of the recent 
+         trend ending at the last point, and such nearest segments are exploited to make 
+         probabilistic predictions for the mid-price. We designed an adaptive Bayesian 
+         Nearest Neighbor Tool for extrapolation of mid-prices using a normalized kernel as 
+         weighting function. The kernel bandwidth is kept fixed to maintain a stable balance 
+         between the bias and variance.</p><br>
       </td>
     </td>
 </tr>
@@ -247,6 +248,42 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          gradient descent training algorithm. The RDNN attains good generalization as it avoids overfitting 
          using two techniques: structural sparsity (attained with the rectified units which induce sparsity) 
          and dropout (which helps to avoid overtraining with the provided examples).</p><br>
+      </td>
+    </td>
+</tr>
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="UcPTMLf.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="UCPTvML.doc">Universal Cointegration for Pairs Trading via Machine Learning</a></i></b>.
+         Pairs trading exploits arbitrage opportunities arising when the prices of two stocks 
+         with common trends diverge temporarily from their average relation. Statistical evidence 
+         for stable long-term common movements in price series can be obtained with the 
+         cointegration measure. The presense of cointegration facilitates the implementation 
+         of mean-reverting trading strategies. One modern approach is to search for universal
+         cointegration using the method of Convergent Cross Mapping (CCM) which assumes that
+         a pair of series feature the same dynamics, and seeks to reconstruct it by a common 
+         function of past temporal patterns (known as neighbors). The CCM uses the k-Nearest
+         Neighbor (kNN) algorithm to look for nearest neighbors in each of the
+         series that can be coupled in a cross-mapping.</p>
+
+      <p>Our research developed a pairs trading tool based on universal cointegration 
+         elaborated with the CCM method. The CCM reproduces the causal dynamics of 
+         pairs from time series by constructing a mutual function that takes close 
+         temporal neighbors as arguments. We designed a specialized kNN algorithm for 
+         local machine learning from interdependent financial time series. This kNN 
+         algorithm has two original, distinguishing aspects: 1) invariant nearest 
+         neighbour selection- it calculates similarity after making adjustments to the
+         amplitudes and periods of the candidate patterns; and 2) mutual centroid 
+         prediction- it computes future time series values by combining data from 
+         coupled nearest neighbors and distance-based weighting the succeeding points 
+         after the precedents. This is a self-adaptive, noise-tolerant learning mechanism 
+         whose output is tested to determine whether universal cointegration between the 
+         given series exists. The significance of the series association is evaluated with
+         the Pearson correlation coefficient.</p><br>
       </td>
     </td>
 </tr>
