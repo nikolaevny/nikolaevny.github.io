@@ -41,6 +41,84 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <br>
 <table width="100%" cellpadding="5" cellspacing="0" border="0">
 
+
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="CTALR.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Cryptocurrency Trading using Asymmetric Local Learning</i></b>.
+         Asymmetric Local Learning is a new AI technology for modelling financial 
+         time series developed to facilitate building sucessful automated trading 
+         robots. The asymmetric learning helps to generate improved forecasts
+         by efficient handling of the model over-prediction and under-prediction.
+         This is achieved using asymmetric loss functions which penalize differently
+         positive and negative fitting errors. Such cost functions help to capture
+         more accurately the direction changes in serial data without emphasising
+         the magnitudes of their deviations. Overall this flexibility enhances the
+         ability to deal with heteroscedastic data contaminated by non-Gaussian 
+         noise when considered for local time series prediction. Furthermore, when 
+         considered for making trading systems it enables to tune the algorithm 
+         eventually to desired business objectives.</p>
+
+      <p>Our research developed a tool for automated cryptocurrency trading using
+         asymmetric local learning. The training process uses a custom made loss
+         function that treats differently the errors, and yields more accurate 
+         predictions which nake possible taking better pricing decisions. The 
+         efficiency of this trading machine has been tested rigorously by conducting 
+         a large number of simulations during which it showed a stable and highly 
+         profitable performance. Backtesting was carried out with BTC/USD prices 
+         downloaded from Coinbase and sampled every 5 minutes from 1/1/2022 to 21/12/2023.
+         The statistics given in the plots are obtained using one-step-ahead forecasts 
+         to compute buy/sell signals for 1 Bitcoin (after paying fees of 1.5 Bps per 
+         trade and taking into account slippage). The numerical results are outstanding: 
+         ProfitPerTrade($) = 62.01, TotalReturn(%) = 402.85, 
+         MaxDD(%) = -14.63%, and SharpeRatio = 5.47.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="DJI2223.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Effective Forecasting via Stochastic Machine Learning</i></b>.
+         Stochastic machine learning is a novel approach to computing predictions 
+         with high fidelity. It generates plausible forecasts of the expected 
+         erratic movements and trend changes in complex (irregular) financial 
+         time series. This is achieved with a nonparametric technology which 
+         includes sampling of subseries at different frequency intervals and 
+         quantization of the data at several levels (this helps to decrease the 
+         influence of the inhomogeneous noise in financial data). Theoretically 
+         speaking the quantisation levels are assumed to be states in a Markov 
+         chain, and the task is to estimate the transition probabilities in the 
+         Markov chain with which to generate predictions. The algorithm uses 
+         a memory of past segments (for each quantisation level) from which it 
+         selects patterns from the past with similar shape to the recent query 
+         segment and uses their continuations as the next states to build the 
+         most likely prediction. This helps to learn well the stochastic dynamics 
+         of the non-stationary data contaminated by large amounts of noise, 
+         like series of returns on prices.</p>
+
+      <p>Our research designed a forecasting algorithm based on the principles
+         of stochastic local learning especially for making financial predictions.
+         The particular implementation of the algorithm removes the linear trend 
+         in the prices in advance, and then performs extrapolation of the 
+         remaining data (after converting the prices into series of returns). 
+         The Markov chain has been made using 6 states. Local learning has 
+         been performed using the Euclidean distance as similarity measure to
+         search for patterns in the history of each level with embedding 
+         dimension 15. The plot illustrates the multi-step ahead daily predictions
+         for one year ahead of the Dow Jones Industrial (^DJI) index generated 
+         by stochastic machine learning.</p><br>
+      </td>
+    </td>
+</tr>
+
+
   <tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
@@ -78,7 +156,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-  <tr>
+<tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
       <TD bgColor=#fffffa vAlign=top width="1%"><img src="Lobpic.jpg" width="200" height="165">
@@ -114,38 +192,32 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
     </td>
 </tr>
 
-  <tr>
+<tr>
     <td align="left" width="2%" valign="top">
       <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="MLkNNdtw.jpg" width="200" height="165">
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="ATRRL.jpg" width="200" height="165">
       <br>
       <td align="left" width="90%" valign="top">
-      <p><b><i><a href="MLDTPATr.doc">Machine Learning with Dynamic Time Patterns for Algorithmic
-         Trading</a></i></b>.
-         The algorithmic trading frameworks typically include estimation of time series models 
-         often performed through machine learning. Handling financial series of prices/returns 
-         is a very difficult task, however, because they are randon fluctuations (more precisely
-         they are commonly assumed to follow standard Brownian motion). That is why, the popular 
-         global function models can not capture global mappings in such series and can not 
-         forecast well. Applied to financial time series of prices/returns the global function 
-         models simply produce outputs with time delay (phase lagging) that are useless for 
-         algorithmic trading. When addressing such tasks one should rather look for solutions 
-         with alternative local models, like the k-Nearest Neighbors (kNN) algorithm. 
-         The kNN provides a technique for computing the probability density function of the 
-         data using only selected close patterns (neighbors) to the query.</p>
+      <p><b><i>Automated Algorithmic Trading using Recurrent Reinforcement Learning</i></b>.
+         Automated algorithmic trading systems become increasingly popular due to the electronic nature 
+         of the transactions executed on many of the current stock exchanges. Making such quantitative 
+         trading systems involves the elaboration of optimal intelligent trading agents that bid on 
+         the market (rather than on discovery of equilibrium prices). The design objective is to 
+         construct profitable trading agents, not only to simulate the market evolution. The trading
+         agents are expected to learn continuously to trade on the market, assuming that it 
+         is populated by other agents with pre-programmed behaviour and also market makers.</p>
 
-      <p>Our research developed a nearest neighbour based machine learning tool (kNN-DTW) for 
-         nonparametric forecasting of time series using dynamic time patterns. The tool has two 
-         distinguishing features: 1) it implements an original statistical DTW for robust matching 
-         of temporal patterns, which uses standardization of the distance norm by the volatility
-         of the series (this prevents the comparisons from distortions by abnormal noise, and 
-         helps to obtain results with close volatility to the current situation); and 2) it 
-         implements individual weighting of the neighbors. These features together make the 
-         kNN-DTW tool more noise tolerant, and more accurate on predicting real-world financial 
-         time series. The experimental results on intraday exchange rates series indicate that 
-         the novel kNN-DTW machine outperforms the other nearest neighbour based algorithms, 
-         using alternative contemporary distance measures, as it achieves higher profits with 
-         lower risk.</p><br>
+      <p>Our research developed an intelligent trading agent whose behaviour is controlled by
+         a dynamic recurrent neural network using reinforcement learning. This agent is trained 
+         using recent market information to improve its bidding strategy and to become more efficient. 
+         The network is given as inputs returns from midprices (in the middle of the bid/ask spread) 
+         and predicts the midprice change direction, which helps us to generate useful trading signals. 
+         The agent learns to maximize the Sharpe ratio criterion, instead of learning to predict prices 
+         (or returns). The neural network training algorithm reinforces the agent performance using 
+         feedback action signals without forecasting returns and without explicitly provided targets 
+         from an external supervisor. Thus, the learning agent is stimulated to achieve higher profits 
+         with lower risk exposure, that is to take decisions leading to reduced risk performance 
+         via rewards with the Sharpe ratio. </p><br>
       </td>
     </td>
 </tr>
@@ -178,6 +250,74 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          a better estimator of the weights distribution leading to portfolios with improved performance. 
          The advantage of this approach is that it has capacity to learn fast the weights distribution 
          in nonparametric fashion.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="EFSML.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Local Quantile Prediction for Trading Machines</i></b>.
+         Local prediction algorithms are especially suitable for financial time series which
+         usually exhibit dynamic statistical characteristics and non-homogeneous noise. Their 
+         learning potential can be extended further with quantile prediction to adapt even 
+         more flexibly to the changes in the distributions occuring in different time 
+         periods. The rationale is that quantile modelling infers ranges of potential 
+         future values, that is it infers interval forecasts efficiently without overfitting
+         the given training data. Such local quantile prediction can achieve better 
+         generalisation when applied to financial data with large amounts of noise 
+         (because it provides ability to capture well the behaviour of skewed serial 
+         data contaminated also by outliers without assuming a specific parametric
+         distribution for the dependant variable).</p>
+
+      <p>Our research developed a Local Quantile Prediction (LQP) algorithm ttat learns 
+         adaptively from financial time series of returns on prices. Extensive walk-forward
+         analysis showed empirically that the LQP helps to build intraday trading machines 
+         with robust economic performance. The figure below illustrates the accumulated 
+         profits on several 1-minute ETFs price data from one year each. The particular
+         conditional quantiles for each asset are selected thourgh experimentation. The 
+         results (accumulated PnL) are computed using one-step-ahead forecasts to generate 
+         buy/sell signals for 100 shares and take into account commissions of 0.002 per 
+         share. The simulated trading sessions started at 9:30 and terminated at 16:00.</p><br>
+      </td>
+    </td>
+</tr>
+
+<tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="MLkNNdtw.jpg" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i><a href="MLDTPATr.doc">Machine Learning with Dynamic Time Patterns for Algorithmic
+         Trading</a></i></b>.
+         The algorithmic trading frameworks typically include estimation of time series models 
+         often performed through machine learning. Handling financial series of prices/returns 
+         is a very difficult task, however, because they are randon fluctuations (more precisely
+         they are commonly assumed to follow standard Brownian motion). That is why, the popular 
+         global function models can not capture global mappings in such series and can not 
+         forecast well. Applied to financial time series of prices/returns the global function 
+         models simply produce outputs with time delay (phase lagging) that are useless for 
+         algorithmic trading. When addressing such tasks one should rather look for solutions 
+         with alternative local models, like the k-Nearest Neighbors (kNN) algorithm. 
+         The kNN provides a technique for computing the probability density function of the 
+         data using only selected close patterns (neighbors) to the query.</p>
+
+      <p>Our research developed a nearest neighbour based machine learning tool (kNN-DTW) for 
+         nonparametric forecasting of time series using dynamic time patterns. The tool has two 
+         distinguishing features: 1) it implements an original statistical DTW for robust matching 
+         of temporal patterns, which uses standardization of the distance norm by the volatility
+         of the series (this prevents the comparisons from distortions by abnormal noise, and 
+         helps to obtain results with close volatility to the current situation); and 2) it 
+         implements individual weighting of the neighbors. These features together make the 
+         kNN-DTW tool more noise tolerant, and more accurate on predicting real-world financial 
+         time series. The experimental results on intraday exchange rates series indicate that 
+         the novel kNN-DTW machine outperforms the other nearest neighbour based algorithms, 
+         using alternative contemporary distance measures, as it achieves higher profits with 
+         lower risk.</p><br>
       </td>
     </td>
 </tr>
@@ -983,29 +1123,6 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
         but not for the observations space. This is a key advantage over most other numerical integration filters and allows us to handle 
         distributions with more complex shapes. In order to deal flexibly with financial series we design a version NQFSt that handles
         heavy-tailed data using the Student-t distribution.</p><br>
-      </td>
-    </td>
-</tr>
-
-<tr>
-    <td align="left" width="2%" valign="top">
-      <p><b><font color="white"><a name="."></a></font></b></p>
-      <TD bgColor=#fffffa vAlign=top width="1%"><img src="ATRRL.jpg" width="200" height="165">
-      <br>
-      <td align="left" width="90%" valign="top">
-      <p><b><i>Automated Algorithmic Trading using Recurrent Reinforcement Learning</i></b>.
-         Automated algorithmic trading systems become increasingly popular due to the electronic nature of the transactions executed on many of 
-         the current stock exchanges. Making such quantitative trading systems involves the elaboration of optimal intelligent trading agents that 
-         bid on the market (rather than on discovery of equilibrium prices). The design objective is to construct profitable trading agents, not 
-         only to simulate the market evolution. The trading agents are expected to learn continuously to trade on the market, assuming that it 
-         is populated by other agents with pre-programmed behaviour and also market makers.</p>
-      <p>Our research developed an intelligent trading agent whose behaviour is controlled by a dynamic recurrent neural network using reinforcement
-         learning. This agent is trained using recent market information to improve its bidding strategy and to become more efficient. The network is 
-         given as inputs returns from midprices (in the middle of the bid/ask spread) and predicts the midprice change direction, which helps us to 
-         generate useful trading signals. The agent learns to maximize the Sharpe ratio criterion, instead of learning to predict prices (or returns). 
-         The neural network training algorithm reinforces the agent performance using feedback action signals without forecasting returns and 
-         without explicitly provided targets from an external supervisor. Thus, the learning agent is stimulated to achieve higher profits 
-         with lower risk exposure, that is to take decisions leading to reduced risk performance via rewards with the Sharpe ratio. </p><br>
       </td>
     </td>
 </tr>
