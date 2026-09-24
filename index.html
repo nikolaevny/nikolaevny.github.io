@@ -41,6 +41,46 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
 <br>
 <table width="100%" cellpadding="5" cellspacing="0" border="0">
 
+  <tr>
+    <td align="left" width="2%" valign="top">
+      <p><b><font color="white"><a name="."></a></font></b></p>
+      <TD bgColor=#fffffa vAlign=top width="1%"><img src="Sept11.JPEG" width="200" height="165">
+      <br>
+      <td align="left" width="90%" valign="top">
+      <p><b><i>Algorithmic Intraday Trading with Momentum Reinforcement</i></b>.
+         Algorithmic trading approaches which use learning models to forecast 
+         future prices tend to overfit the historical data, resulting in 
+         disappointing performance when applied to unseen market conditions. 
+         One alternative approach to automated trading is to make algorithms 
+         that adapt directly to the observed dynamics of the market. This 
+         approach generates trading signals based on the relative evolution 
+         of price across different time scales. The resulting signal captures 
+         deviations between price dynamics across different time horizons, 
+         while momentum reinforcement is used to establish adaptive thresholds 
+         for these deviations. The reinforcement mechanisms are asymmetric, 
+         allowing the framework to account for the distinct characteristics 
+         of bullish and bearish market behaviour.</p>
+
+      <p>Our research developed a Trading Machine with Momentum Reinforcement 
+         (TMMR), which exploits momentum acceleration and deceleration without 
+         relying on model fitting or price forecasting. TMMR generates entry 
+         and exit signals when it detects statistically significant changes 
+         in market dynamics, particularly in momentum. The statistical 
+         significance of price movements is assessed using quantile-based 
+         thresholds. This helps reduce sensitivity to transient market noise 
+         while allowing the strategy to adapt to changing volatility.
+         The TMMR algorithm was implemented in Python and rigorously backtested 
+         on several price time series using the Backtrader framework. We used
+         1-minute GOOGL prices covering the ten-year period from 2015 to 2025. 
+         The plot was made after optimizing the parameters over the first five 
+         years of data, and next using the subsequent five years exclusively 
+         for out-of-sample evaluation. These results indicate that, under the 
+         assumptions for transaction-cost 0.02% and slippage 0.01%, TMMR 
+         produced a substantially more favourable return-to-risk profile 
+         than simply holding GOOGL.</p><br>
+      </td>
+    </td>
+</tr>
 
   <tr>
     <td align="left" width="2%" valign="top">
@@ -72,9 +112,7 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          downloaded from Coinbase and sampled every 5 minutes from 1/1/2022 to 21/12/2023.
          The statistics given in the plots are obtained using one-step-ahead forecasts 
          to compute buy/sell signals for 1 Bitcoin (after paying fees of 1.5 Bps per 
-         trade and taking into account slippage). The numerical results are outstanding: 
-         ProfitPerTrade($) = 62.01, TotalReturn(%) = 402.85, 
-         MaxDD(%) = -14.63%, and SharpeRatio = 5.47.</p><br>
+         trade and taking into account slippage).</p><br>
       </td>
     </td>
 </tr>
@@ -477,8 +515,8 @@ h6        { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-sm
          the occasional breaks in the mean, and allows us to create really good portfolios. A distinguishing
          feature of our tool is that we have implemented a Markov Regime-Switching (MRS) model. Its regimes 
          are separated by distinct means and volatilities, while the lagged input coefficients are common 
-         for both submodels. The switching parameters are calibrated with the Hamilton’s filter, and the 
-         Kim’s smoother. The two sets of asset betas are estimated using a Bayesian machine learning 
+         for both submodels. The switching parameters are calibrated with the Hamilton s filter, and the 
+         Kim s smoother. The two sets of asset betas are estimated using a Bayesian machine learning 
          technique and next processed in a dynamic mean-variance setting. At each moment in time the 
          portfolio weights are calculated dependent on the particular regime, that is the
          portfolio is conditioned on the regimes.</p><br>
